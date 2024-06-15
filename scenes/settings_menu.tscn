@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scripts/settings_menu.cs" id="1_7uhah"]
 
 [node name="Settings_menu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

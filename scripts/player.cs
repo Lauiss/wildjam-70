@@ -17,6 +17,7 @@ public partial class player : CharacterBody3D
 	
 	private Node3D _head;
 	private Camera3D _camera;
+	private Control _pauseMenu;
 	
 	public override void _Ready(){
 		_head = GetNode<Node3D>("Head");
@@ -41,11 +42,7 @@ public partial class player : CharacterBody3D
 		} else {
 			SPEED = WALK_SPEED;
 		}
-			
-		// TODO : change to open a in-game menu
-		if (Input.IsActionJustPressed("escape"))
-			GetTree().Quit();
-
+		
 		// Get the input direction and handle the movement/deceleration.
 		Vector2 inputDir = Input.GetVector("left", "right", "up", "down");
 		Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
