@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb03ojef2wv3u"]
+
+[ext_resource type="Script" path="res://scripts/settings_menu.cs" id="1_7uhah"]
+
+[node name="Settings_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7uhah")
+
+[node name="Background_ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.0784314, 0.317647, 1)
+
+[node name="Setting_page" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Setting_title" type="Label" parent="Setting_page"]
+layout_mode = 2
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="Settings_container" type="VBoxContainer" parent="Setting_page"]
+layout_mode = 2
+
+[node name="Buttons_container" type="VBoxContainer" parent="Setting_page"]
+layout_mode = 2
+
+[node name="Buttons_placing_container" type="HBoxContainer" parent="Setting_page/Buttons_container"]
+layout_mode = 2
+alignment = 1
+
+[node name="Back_button" type="Button" parent="Setting_page/Buttons_container/Buttons_placing_container"]
+layout_mode = 2
+text = "Back"
+
+[node name="Confirm_button" type="Button" parent="Setting_page/Buttons_container/Buttons_placing_container"]
+layout_mode = 2
+text = "Confirm"
+
+[connection signal="pressed" from="Setting_page/Buttons_container/Buttons_placing_container/Back_button" to="." method="BackToMainMenu"]
