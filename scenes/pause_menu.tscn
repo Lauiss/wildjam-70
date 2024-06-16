@@ -1,6 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6mk304u3rysc"]
+[gd_scene load_steps=6 format=3 uid="uid://dqw54c6k3swt"]
 
 [ext_resource type="Script" path="res://scripts/pause_menu.cs" id="1_4fsnu"]
+[ext_resource type="Theme" uid="uid://c1smofwrfjxpt" path="res://UI/default_UI.tres" id="2_xy2g6"]
+[ext_resource type="FontFile" uid="uid://dks3mplpwqwc5" path="res://Fonts/ChardinDoihleExpanded-1GW8v.ttf" id="3_36ue7"]
+[ext_resource type="PackedScene" uid="uid://mrliintxpa5e" path="res://scenes/settings_menu.tscn" id="4_galbo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_va6re"]
+bg_color = Color(0.882353, 0.458824, 0.266667, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.8, 0.392157, 0.2, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="Pause_menu" type="Control"]
 process_mode = 3
@@ -12,38 +28,63 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4fsnu")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="pauseScreen" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = -64.0
-offset_right = 48.0
-offset_bottom = 64.0
+offset_left = -223.0
+offset_top = -252.695
+offset_right = 223.0
+offset_bottom = 215.305
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(223, 234)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="Panel" type="Panel" parent="pauseScreen"]
+texture_filter = 1
 layout_mode = 2
-size_flags_vertical = 4
+theme = ExtResource("2_xy2g6")
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+[node name="pauseContainer" type="VBoxContainer" parent="pauseScreen"]
 layout_mode = 2
-text = "Pause"
+size_flags_vertical = 8
+theme_override_constants/separation = 20
+
+[node name="screenTitle" type="Label" parent="pauseScreen/pauseContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_36ue7")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_va6re")
+text = "Paused"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Resume" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="settings" type="Button" parent="pauseScreen/pauseContainer"]
 layout_mode = 2
+theme = ExtResource("2_xy2g6")
+theme_override_font_sizes/font_size = 36
+text = "Settings"
+
+[node name="resume" type="Button" parent="pauseScreen/pauseContainer"]
+layout_mode = 2
+theme = ExtResource("2_xy2g6")
+theme_override_font_sizes/font_size = 36
 text = "Resume
 "
 
-[node name="Main menu" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="mainMenu" type="Button" parent="pauseScreen/pauseContainer"]
 layout_mode = 2
+theme = ExtResource("2_xy2g6")
+theme_override_font_sizes/font_size = 36
 text = "Main menu"
 
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Resume" to="." method="Resume"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Main menu" to="." method="OpenMainMenu"]
+[node name="setting_menu" parent="." instance=ExtResource("4_galbo")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="pauseScreen/pauseContainer/resume" to="." method="Resume"]
+[connection signal="pressed" from="pauseScreen/pauseContainer/mainMenu" to="." method="OpenMainMenu"]
