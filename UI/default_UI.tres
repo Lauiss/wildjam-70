@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=14 format=3 uid="uid://c1smofwrfjxpt"]
+[gd_resource type="Theme" load_steps=15 format=3 uid="uid://c1smofwrfjxpt"]
 
 [ext_resource type="Texture2D" uid="uid://drqw38k5f2ink" path="res://UI/ui_interactables.png" id="1_175ns"]
 [ext_resource type="Texture2D" uid="uid://b5b2jmdq0rpra" path="res://UI/frame_panel.png" id="2_f4m06"]
@@ -74,6 +74,18 @@ expand_margin_right = 50.0
 expand_margin_bottom = 50.0
 region_rect = Rect2(0, 0, 256, 256)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yoy6j"]
+texture = ExtResource("2_f4m06")
+texture_margin_left = 27.0
+texture_margin_top = 10.0
+texture_margin_right = 27.0
+texture_margin_bottom = 21.0
+expand_margin_left = 50.0
+expand_margin_top = 50.0
+expand_margin_right = 50.0
+expand_margin_bottom = 50.0
+region_rect = Rect2(0, 0, 256, 256)
+
 [resource]
 default_font_size = 0
 AcceptDialog/styles/panel = SubResource("StyleBoxTexture_fn27t")
@@ -103,3 +115,4 @@ Label/font_sizes/font_size = 16
 Label/fonts/font = null
 Label/styles/normal = SubResource("StyleBoxEmpty_8wnpt")
 Panel/styles/panel = SubResource("StyleBoxTexture_voe7n")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_yoy6j")
