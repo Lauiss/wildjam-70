@@ -1,20 +1,15 @@
-[gd_resource type="Theme" load_steps=16 format=3 uid="uid://c1smofwrfjxpt"]
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://c1smofwrfjxpt"]
 
-[ext_resource type="Texture2D" uid="uid://b5b2jmdq0rpra" path="res://UI/frame_panel.png" id="1_u64ov"]
-[ext_resource type="Texture2D" uid="uid://drqw38k5f2ink" path="res://UI/ui_interactables.png" id="2_lwtl7"]
-[ext_resource type="Texture2D" uid="uid://dpprtbwq1rtom" path="res://UI/grabber.png" id="3_j2mo4"]
-[ext_resource type="Texture2D" uid="uid://yx6hy2n1ff53" path="res://UI/grabber_high.png" id="4_6vxwr"]
-[ext_resource type="FontFile" uid="uid://dks3mplpwqwc5" path="res://Fonts/ChardinDoihleExpanded-1GW8v.ttf" id="5_fnp57"]
+[ext_resource type="Texture2D" uid="uid://drqw38k5f2ink" path="res://UI/ui_interactables.png" id="1_175ns"]
+[ext_resource type="Texture2D" uid="uid://b5b2jmdq0rpra" path="res://UI/frame_panel.png" id="2_f4m06"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fn27t"]
-texture = ExtResource("1_u64ov")
 texture_margin_left = 32.0
 texture_margin_top = 24.0
 texture_margin_right = 32.0
 texture_margin_bottom = 24.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8bl0n"]
-texture = ExtResource("2_lwtl7")
 texture_margin_left = 12.0
 texture_margin_top = 32.0
 texture_margin_right = 12.0
@@ -22,7 +17,7 @@ texture_margin_bottom = 33.0
 region_rect = Rect2(142, 26, 98, 43)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hjab3"]
-texture = ExtResource("2_lwtl7")
+texture = ExtResource("1_175ns")
 texture_margin_left = 12.0
 texture_margin_top = 32.0
 texture_margin_right = 12.0
@@ -30,7 +25,7 @@ texture_margin_bottom = 33.0
 region_rect = Rect2(142, 26, 98, 43)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_skjq1"]
-texture = ExtResource("2_lwtl7")
+texture = ExtResource("1_175ns")
 texture_margin_left = 12.0
 texture_margin_top = 32.0
 texture_margin_right = 12.0
@@ -38,7 +33,7 @@ texture_margin_bottom = 33.0
 region_rect = Rect2(142, 26, 98, 43)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f0cua"]
-texture = ExtResource("2_lwtl7")
+texture = ExtResource("1_175ns")
 texture_margin_left = 12.0
 texture_margin_top = 32.0
 texture_margin_right = 12.0
@@ -46,7 +41,7 @@ texture_margin_bottom = 33.0
 region_rect = Rect2(142, 26, 98, 43)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hfgt5"]
-texture = ExtResource("2_lwtl7")
+texture = ExtResource("1_175ns")
 texture_margin_left = 62.0
 texture_margin_top = 59.0
 texture_margin_right = 62.0
@@ -58,15 +53,17 @@ region_rect = Rect2(698, 119, 499, 213)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g8nu1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_02afl"]
-texture = ExtResource("2_lwtl7")
+texture = ExtResource("1_175ns")
 texture_margin_left = 16.0
 texture_margin_top = 22.0
 texture_margin_right = 15.0
 texture_margin_bottom = 22.0
 region_rect = Rect2(5, 26, 112, 43)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8wnpt"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_voe7n"]
-texture = ExtResource("1_u64ov")
+texture = ExtResource("2_f4m06")
 texture_margin_left = 55.0
 texture_margin_top = 21.0
 texture_margin_right = 55.0
@@ -78,7 +75,6 @@ expand_margin_bottom = 50.0
 region_rect = Rect2(0, 0, 256, 256)
 
 [resource]
-default_font = ExtResource("5_fnp57")
 default_font_size = 0
 AcceptDialog/styles/panel = SubResource("StyleBoxTexture_fn27t")
 Button/styles/disabled = SubResource("StyleBoxTexture_8bl0n")
@@ -88,9 +84,9 @@ Button/styles/normal = SubResource("StyleBoxTexture_f0cua")
 Button/styles/pressed = SubResource("StyleBoxTexture_hfgt5")
 HSlider/constants/center_grabber = 0
 HSlider/constants/grabber_offset = 0
-HSlider/icons/grabber = ExtResource("3_j2mo4")
+HSlider/icons/grabber = null
 HSlider/icons/grabber_disabled = null
-HSlider/icons/grabber_highlight = ExtResource("4_6vxwr")
+HSlider/icons/grabber_highlight = null
 HSlider/icons/tick = null
 HSlider/styles/grabber_area = SubResource("StyleBoxEmpty_so0f2")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxEmpty_g8nu1")
@@ -104,6 +100,6 @@ Label/constants/shadow_offset_x = 0
 Label/constants/shadow_offset_y = 0
 Label/constants/shadow_outline_size = 0
 Label/font_sizes/font_size = 16
-Label/fonts/font = ExtResource("5_fnp57")
-Label/styles/normal = null
+Label/fonts/font = null
+Label/styles/normal = SubResource("StyleBoxEmpty_8wnpt")
 Panel/styles/panel = SubResource("StyleBoxTexture_voe7n")

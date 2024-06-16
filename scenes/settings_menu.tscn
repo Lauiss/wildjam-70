@@ -35,7 +35,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0.2, 0.352941, 1)
 
-[node name="OptionsScreen" type="MarginContainer" parent="."]
+[node name="settingsScreen" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -50,41 +50,41 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(223, 234)
 
-[node name="Panel" type="Panel" parent="OptionsScreen"]
+[node name="Panel" type="Panel" parent="settingsScreen"]
 texture_filter = 1
 layout_mode = 2
 theme = ExtResource("1_71inf")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="OptionsScreen"]
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_constants/separation = 20
-
-[node name="Language" type="Button" parent="OptionsScreen/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("1_71inf")
-theme_override_font_sizes/font_size = 72
-text = "Language"
-
-[node name="Volume" type="Button" parent="OptionsScreen/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("1_71inf")
-theme_override_font_sizes/font_size = 72
-text = "Volume"
-
-[node name="Back" type="Button" parent="OptionsScreen/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("1_71inf")
-theme_override_font_sizes/font_size = 36
-text = "Back"
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="OptionsScreen"]
+[node name="default" type="VBoxContainer" parent="settingsScreen"]
 visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="OptionsScreen/VBoxContainer2"]
+[node name="Language" type="Button" parent="settingsScreen/default"]
+layout_mode = 2
+theme = ExtResource("1_71inf")
+theme_override_font_sizes/font_size = 72
+text = "Language"
+
+[node name="Volume" type="Button" parent="settingsScreen/default"]
+layout_mode = 2
+theme = ExtResource("1_71inf")
+theme_override_font_sizes/font_size = 72
+text = "Volume"
+
+[node name="Back" type="Button" parent="settingsScreen/default"]
+layout_mode = 2
+theme = ExtResource("1_71inf")
+theme_override_font_sizes/font_size = 36
+text = "Back"
+
+[node name="volume" type="VBoxContainer" parent="settingsScreen"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="settingsScreen/volume"]
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_j6ck5")
@@ -94,70 +94,70 @@ text = "Volume"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="OptionsScreen/VBoxContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
 
-[node name="VolumePercentageLabel" type="Label" parent="OptionsScreen/VBoxContainer2/HBoxContainer"]
+[node name="VolumePercentageLabel" type="Label" parent="settingsScreen/volume/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_71inf")
 theme_override_font_sizes/font_size = 16
 text = "Main : "
 
-[node name="HSlider" type="HSlider" parent="OptionsScreen/VBoxContainer2/HBoxContainer"]
+[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("1_71inf")
 value = 100.0
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="OptionsScreen/VBoxContainer2"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
 
-[node name="SFX" type="Label" parent="OptionsScreen/VBoxContainer2/HBoxContainer2"]
+[node name="SFX" type="Label" parent="settingsScreen/volume/HBoxContainer2"]
 layout_mode = 2
 theme = ExtResource("1_71inf")
 theme_override_font_sizes/font_size = 16
 text = "SFX : "
 
-[node name="HSlider" type="HSlider" parent="OptionsScreen/VBoxContainer2/HBoxContainer2"]
+[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("1_71inf")
 value = 31.0
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="OptionsScreen/VBoxContainer2"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
 
-[node name="Music" type="Label" parent="OptionsScreen/VBoxContainer2/HBoxContainer3"]
+[node name="Music" type="Label" parent="settingsScreen/volume/HBoxContainer3"]
 layout_mode = 2
 theme = ExtResource("1_71inf")
 theme_override_font_sizes/font_size = 16
 text = "Music :"
 
-[node name="HSlider" type="HSlider" parent="OptionsScreen/VBoxContainer2/HBoxContainer3"]
+[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("1_71inf")
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="OptionsScreen/VBoxContainer2"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
 
-[node name="Dogs" type="Label" parent="OptionsScreen/VBoxContainer2/HBoxContainer4"]
+[node name="Dogs" type="Label" parent="settingsScreen/volume/HBoxContainer4"]
 layout_mode = 2
 theme = ExtResource("1_71inf")
 theme_override_font_sizes/font_size = 16
 text = "Dogs : "
 
-[node name="HSlider" type="HSlider" parent="OptionsScreen/VBoxContainer2/HBoxContainer4"]
+[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer4"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("1_71inf")
 value = 68.0
 
-[node name="Back" type="Button" parent="OptionsScreen/VBoxContainer2"]
+[node name="Back" type="Button" parent="settingsScreen/volume"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -168,4 +168,4 @@ theme_override_fonts/font = ExtResource("2_s7w1x")
 theme_override_font_sizes/font_size = 32
 text = "Back to Menu"
 
-[node name="SFXPreview" type="AudioStreamPlayer" parent="OptionsScreen"]
+[node name="SFXPreview" type="AudioStreamPlayer" parent="settingsScreen"]
