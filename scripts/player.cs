@@ -19,9 +19,12 @@ public partial class player : CharacterBody3D
 	private Camera3D _camera;
 	private Control _pauseMenu;
 	
+	private hand _hand; 
+	
 	public override void _Ready(){
 		_head = GetNode<Node3D>("Head");
 		_camera = GetNode<Camera3D>("Head/Camera");
+		_hand = GetNode<hand>("Hand");
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 	}
 	
@@ -74,7 +77,7 @@ public partial class player : CharacterBody3D
 		}
 		
 		//interaction handling
- 		if (Input.IsActionJustPressed("interact")){
+ 		if (Input.IsActionPressed("interact")){
 			GD.Print("Interaction");	
 		}
 	}

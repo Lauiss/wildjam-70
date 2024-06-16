@@ -44,6 +44,3 @@ public partial class pause_menu : Control
 	GetTree().ChangeSceneToFile("res://scenes/main_menu.tscn");
 	}
 }
-
-
-

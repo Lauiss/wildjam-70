@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi5s7ndpbkb4k"]
+
+[ext_resource type="Texture2D" uid="uid://cll3vecwrht7" path="res://icon.svg" id="1_7f8n8"]
+[ext_resource type="Script" path="res://scripts/hand.cs" id="1_i8xbc"]
+
+[node name="Hand" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("1_i8xbc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(556, 304)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_7f8n8")
