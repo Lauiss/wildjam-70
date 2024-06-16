@@ -1,18 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bm0k1us5e0ksr"]
+[gd_scene load_steps=2 format=3 uid="uid://bm0k1us5e0ksr"]
 
 [ext_resource type="PackedScene" uid="uid://dktqvw1ct70t4" path="res://scenes/main_menu.tscn" id="1_ignlw"]
-[ext_resource type="PackedScene" uid="uid://mrliintxpa5e" path="res://scenes/settings_menu.tscn" id="2_kcg6y"]
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Game" type="Node3D"]
 
 [node name="Main_menu" parent="." instance=ExtResource("1_ignlw")]
-layout_mode = 1
-
-[node name="Settings_menu" parent="." instance=ExtResource("2_kcg6y")]
-layout_mode = 1

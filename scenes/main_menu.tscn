@@ -1,14 +1,16 @@
 [gd_scene load_steps=2 format=3 uid="uid://dktqvw1ct70t4"]
 
-[ext_resource type="PackedScene" uid="uid://c8m8gbs3hfeva" path="res://scenes/settings_menu.tscn" id="1_8nr6w"]
+[ext_resource type="Script" path="res://scripts/main_menu.cs" id="1_t04ev"]
 
 [node name="Main_menu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_t04ev")
 
 [node name="Background_ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(500, 500)
@@ -21,7 +23,6 @@ grow_vertical = 2
 color = Color(0, 0.0784314, 0.156863, 1)
 
 [node name="VBox_menu_container" type="VBoxContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -52,9 +53,6 @@ text = "Settings"
 [node name="Exit_button" type="Button" parent="VBox_menu_container/VBox_buttons_container"]
 layout_mode = 2
 text = "Exit"
-
-[node name="settings_menu" parent="." instance=ExtResource("1_8nr6w")]
-layout_mode = 1
 
 [connection signal="pressed" from="VBox_menu_container/VBox_buttons_container/Start_button" to="." method="start_game"]
 [connection signal="pressed" from="VBox_menu_container/VBox_buttons_container/Settings_button" to="." method="open_settings"]
