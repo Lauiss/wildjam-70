@@ -5,9 +5,9 @@ public partial class player : CharacterBody3D
 {
 	//global movement variables
 	public float SPEED;
-	public const float WALK_SPEED = 5.0f;
-	public const float SPRINT_SPEED = 10.0f;
-	public const float JUMPVELOCITY = 4.5f;
+	public const float WALK_SPEED = 0.0f;
+	public const float SPRINT_SPEED = 0.0f;
+	public const float JUMPVELOCITY = 0.0f;
 	public float GRAVITY = 9.8f;
 	public float SENSITIVITY = 0.003f;
 	
@@ -25,6 +25,10 @@ public partial class player : CharacterBody3D
 		_head = GetNode<Node3D>("Head");
 		_camera = GetNode<Camera3D>("Head/Camera");
 		_hand = GetNode<hand>("Hand");
+		
+		WALK_SPEED = GlobalVariables.WALK_SPEED;
+		SPRINT_SPEED = GlobalVariables.SPRINT_SPEED;
+		JUMPVELOCITY = GlobalVariables.JUMPVELOCITY;
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 	}
 	

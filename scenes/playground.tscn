@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dfn2kdgq3kn84"]
+[gd_scene load_steps=10 format=3 uid="uid://dfn2kdgq3kn84"]
 
-[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="1_mlphr"]
+[ext_resource type="Script" path="res://scripts/playground.cs" id="1_kgnng"]
+[ext_resource type="PackedScene" uid="uid://bqc6d3ss1aq1d" path="res://scenes/player.tscn" id="1_mlphr"]
 [ext_resource type="PackedScene" uid="uid://dqw54c6k3swt" path="res://scenes/pause_menu.tscn" id="2_2fsvr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qkdly"]
@@ -26,6 +27,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Playground" type="Node3D"]
+script = ExtResource("1_kgnng")
 
 [node name="Ground" type="CSGBox3D" parent="."]
 material_override = SubResource("StandardMaterial3D_qkdly")
@@ -81,7 +83,7 @@ transform = Transform3D(0.999676, 0.025443, 0.000972086, -0.0254616, 0.998947, 0
 use_collision = true
 size = Vector3(2, 1, 1)
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_mlphr")]
+[node name="Player" parent="." instance=ExtResource("1_mlphr")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
