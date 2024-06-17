@@ -5,15 +5,17 @@ public partial class player : CharacterBody3D
 {
 	//global movement variables
 	public float SPEED;
-	public const float WALK_SPEED = 0.0f;
-	public const float SPRINT_SPEED = 0.0f;
-	public const float JUMPVELOCITY = 0.0f;
+	public float WALK_SPEED;
+	public float SPRINT_SPEED;
+	public float JUMPVELOCITY;
+	private global_variables _global;
 	public float GRAVITY = 9.8f;
 	public float SENSITIVITY = 0.003f;
 	
 	// accumulators for camera
 	private float _rotationX = 0f;
 	private float _rotationY = 0f;
+	
 	
 	private Node3D _head;
 	private Camera3D _camera;
@@ -25,10 +27,11 @@ public partial class player : CharacterBody3D
 		_head = GetNode<Node3D>("Head");
 		_camera = GetNode<Camera3D>("Head/Camera");
 		_hand = GetNode<hand>("Hand");
+		_global = GetTree().Root.GetNode<global_variables>("Global");
 		
-		WALK_SPEED = GlobalVariables.WALK_SPEED;
-		SPRINT_SPEED = GlobalVariables.SPRINT_SPEED;
-		JUMPVELOCITY = GlobalVariables.JUMPVELOCITY;
+		WALK_SPEED = _global.WALK_SPEED;
+		SPRINT_SPEED = _global.SPRINT_SPEED;
+		JUMPVELOCITY = _global.JUMPVELOCITY;
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 	}
 	

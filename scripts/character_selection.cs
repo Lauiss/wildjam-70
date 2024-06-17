@@ -3,9 +3,11 @@ using System;
 
 public partial class character_selection : Control
 {
+	private global_variables _global;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		_global = GetTree().Root.GetNode<global_variables>("Global");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,10 +17,9 @@ public partial class character_selection : Control
 	
 	private void LoadSceneWithCharacter()
 	{
-		GlobalVariables.setWalkSpeed(5.0f);
-		GlobalVariables.SPRINT_SPEED = 10.0f;
-		GlobalVariables.JUMPVELOCITY = 4.5f;
-		var nextScene = (PackedScene)ResourceLoader.Load("res://scenes/playground.tscn");
-		GetTree().ChangeSceneToPacked(nextScene);
+		_global.WALK_SPEED = 5.0f;
+		_global.SPRINT_SPEED = 10.0f;
+		_global.JUMPVELOCITY = 4.5f;
+		_global.GotoScene("res://scenes/playground.tscn");
 	}
 }
