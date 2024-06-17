@@ -1,7 +1,39 @@
 [gd_scene load_steps=3 format=3 uid="uid://dktqvw1ct70t4"]
 
-[ext_resource type="PackedScene" uid="uid://mrliintxpa5e" path="res://scenes/settings_menu.tscn" id="1_8nr6w"]
-[ext_resource type="Script" path="res://scripts/main_menu.cs" id="1_t04ev"]
+[ext_resource type="PackedScene" uid="uid://mrliintxpa5e" path="res://scenes/settings_menu.tscn" id="2_1yake"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_njs50"]
+script/source = "using Godot;
+using System;
+
+public partial class main_menu : Control
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+	
+	private void start_game()
+	{
+		GetTree().ChangeSceneToFile(\"res://scenes/playground.tscn\");
+	}
+	
+	private void exit_game()
+	{
+		GetTree().Quit();
+	}
+	
+	private void open_settings()
+	{
+		GetTree().ChangeSceneToFile(\"res://scenes/settings_menu.tscn\");
+	}
+}
+"
 
 [node name="Main_menu" type="Control"]
 process_mode = 3
@@ -11,7 +43,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_t04ev")
+script = SubResource("CSharpScript_njs50")
 
 [node name="Background_ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(500, 500)
@@ -56,7 +88,7 @@ text = "Settings"
 layout_mode = 2
 text = "Exit"
 
-[node name="setting_menu" parent="." instance=ExtResource("1_8nr6w")]
+[node name="settings_menu" parent="." instance=ExtResource("2_1yake")]
 layout_mode = 1
 
 [connection signal="pressed" from="VBox_menu_container/VBox_buttons_container/Start_button" to="." method="start_game"]
