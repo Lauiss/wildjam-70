@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqw54c6k3swt"]
+[gd_scene load_steps=9 format=3 uid="uid://dqw54c6k3swt"]
 
-[ext_resource type="Script" path="res://scenes/pause_menu.gd" id="1_npqiy"]
+[ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_npqiy"]
 [ext_resource type="Theme" uid="uid://c1smofwrfjxpt" path="res://UI/default_UI.tres" id="2_xy2g6"]
 [ext_resource type="FontFile" uid="uid://dks3mplpwqwc5" path="res://Fonts/ChardinDoihleExpanded-1GW8v.ttf" id="3_36ue7"]
 [ext_resource type="FontFile" uid="uid://b7osbfk2po1xx" path="res://Fonts/ChardinDoihle-8Mpwn.ttf" id="4_bx4qo"]
+[ext_resource type="Script" path="res://scripts/volume.gd" id="4_qrtad"]
+[ext_resource type="AudioStream" uid="uid://ofhlh3wruqrr" path="res://SFX/volume.mp3" id="6_ffx4y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_va6re"]
 bg_color = Color(0.882353, 0.458824, 0.266667, 1)
@@ -171,6 +173,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_xy2g6")
 value = 100.0
+script = ExtResource("4_qrtad")
+bus_name = "Master"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -187,6 +191,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_xy2g6")
 value = 31.0
+script = ExtResource("4_qrtad")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -202,6 +207,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_xy2g6")
+script = ExtResource("4_qrtad")
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -218,6 +224,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_xy2g6")
 value = 68.0
+script = ExtResource("4_qrtad")
 
 [node name="Back" type="Button" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -231,6 +238,7 @@ theme_override_font_sizes/font_size = 32
 text = "Back to Menu"
 
 [node name="SFXPreview" type="AudioStreamPlayer" parent="settingsScreen"]
+stream = ExtResource("6_ffx4y")
 
 [connection signal="pressed" from="pauseScreen/pauseContainer/settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="pauseScreen/pauseContainer/resume" to="." method="Resume"]
@@ -240,4 +248,8 @@ text = "Back to Menu"
 [connection signal="pressed" from="settingsScreen/default/Language" to="." method="_on_language_pressed"]
 [connection signal="pressed" from="settingsScreen/default/Volume" to="." method="_on_volume_pressed"]
 [connection signal="pressed" from="settingsScreen/default/Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer/HSlider" to="settingsScreen/volume/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer2/HSlider" to="settingsScreen/volume/HBoxContainer2/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer3/HSlider" to="settingsScreen/volume/HBoxContainer3/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer4/HSlider" to="settingsScreen/volume/HBoxContainer4/HSlider" method="_on_value_changed"]
 [connection signal="pressed" from="settingsScreen/volume/Back" to="." method="_on_back_pressed"]

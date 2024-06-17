@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnxfnw4ffj33s"]
+[gd_scene load_steps=9 format=3 uid="uid://cnxfnw4ffj33s"]
 
-[ext_resource type="Script" path="res://scenes/title_menu.gd" id="1_gnegl"]
+[ext_resource type="Script" path="res://scripts/title_menu.gd" id="1_gnegl"]
 [ext_resource type="Theme" uid="uid://c1smofwrfjxpt" path="res://UI/default_UI.tres" id="2_7qmhy"]
 [ext_resource type="FontFile" uid="uid://dks3mplpwqwc5" path="res://Fonts/ChardinDoihleExpanded-1GW8v.ttf" id="3_vw8a0"]
 [ext_resource type="FontFile" uid="uid://b7osbfk2po1xx" path="res://Fonts/ChardinDoihle-8Mpwn.ttf" id="4_a7vwk"]
 [ext_resource type="Texture2D" uid="uid://3bvsuvjhd3yd" path="res://UI/banner.png" id="5_0pmu0"]
+[ext_resource type="Script" path="res://scripts/volume.gd" id="5_ircyo"]
+[ext_resource type="AudioStream" uid="uid://ofhlh3wruqrr" path="res://SFX/volume.mp3" id="6_i2wqo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dy8uv"]
 bg_color = Color(0.882353, 0.458824, 0.266667, 1)
@@ -158,6 +160,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_7qmhy")
 value = 100.0
+script = ExtResource("5_ircyo")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -174,6 +177,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_7qmhy")
 value = 31.0
+script = ExtResource("5_ircyo")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -189,6 +193,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_7qmhy")
+script = ExtResource("5_ircyo")
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -205,6 +210,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_7qmhy")
 value = 68.0
+script = ExtResource("5_ircyo")
 
 [node name="Back" type="Button" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -218,6 +224,8 @@ theme_override_font_sizes/font_size = 32
 text = "Back to Menu"
 
 [node name="SFXPreview" type="AudioStreamPlayer" parent="settingsScreen"]
+stream = ExtResource("6_i2wqo")
+bus = &"SFX"
 
 [connection signal="pressed" from="pauseScreen/pauseContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="pauseScreen/pauseContainer/settings" to="." method="_on_settings_pressed"]
