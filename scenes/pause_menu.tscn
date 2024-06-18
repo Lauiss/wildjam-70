@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://dqw54c6k3swt"]
+[gd_scene load_steps=12 format=3 uid="uid://dqw54c6k3swt"]
 
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_npqiy"]
 [ext_resource type="Theme" uid="uid://c1smofwrfjxpt" path="res://UI/default_UI.tres" id="2_xy2g6"]
 [ext_resource type="FontFile" uid="uid://53vg4mdmgfxj" path="res://Fonts/Monoton-Regular.ttf" id="3_sycpf"]
 [ext_resource type="FontFile" uid="uid://bntwy8qh4wgb0" path="res://Fonts/BebasNeue-Regular.ttf" id="4_poywg"]
-[ext_resource type="Script" path="res://scripts/volume.gd" id="4_qrtad"]
 [ext_resource type="Texture2D" uid="uid://bl62en76gobmi" path="res://UI/fr.png" id="5_huua5"]
 [ext_resource type="Texture2D" uid="uid://brguj68y2sctg" path="res://UI/gb.png" id="6_7x1yt"]
 [ext_resource type="AudioStream" uid="uid://ofhlh3wruqrr" path="res://SFX/volume.mp3" id="6_ffx4y"]
@@ -37,6 +36,7 @@ size = Vector2(60, 45)
 
 [node name="Pause_menu" type="Control"]
 process_mode = 3
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -185,9 +185,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_xy2g6")
 min_value = -15.0
-max_value = 15.0
-value = 15.0
-script = ExtResource("4_qrtad")
+max_value = 0.0
+step = 0.5
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -202,11 +201,9 @@ text = "SFX : "
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-theme = ExtResource("2_xy2g6")
 min_value = -15.0
-max_value = 15.0
-value = 15.0
-script = ExtResource("4_qrtad")
+max_value = 0.0
+step = 0.5
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -223,9 +220,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_xy2g6")
 min_value = -15.0
-max_value = 15.0
-value = 15.0
-script = ExtResource("4_qrtad")
+max_value = 0.0
+step = 0.5
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -242,9 +238,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_xy2g6")
 min_value = -15.0
-max_value = 15.0
-value = 15.0
-script = ExtResource("4_qrtad")
+max_value = 0.0
+step = 0.5
 
 [node name="Back" type="Button" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -435,7 +430,6 @@ bus = &"SFX"
 
 [node name="MasterPreview" type="AudioStreamPlayer" parent="settingsScreen"]
 stream = ExtResource("6_ffx4y")
-bus = &"SFX"
 
 [node name="MusicPreview" type="AudioStreamPlayer" parent="settingsScreen"]
 stream = ExtResource("6_ffx4y")
@@ -455,8 +449,10 @@ stream = ExtResource("6_ffx4y")
 [connection signal="pressed" from="settingsScreen/default/Language" to="." method="_on_language_pressed"]
 [connection signal="pressed" from="settingsScreen/default/Volume" to="." method="_on_volume_pressed"]
 [connection signal="pressed" from="settingsScreen/default/Back" to="." method="_on_back_pressed"]
-[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer2/SFX" to="settingsScreen/volume/HBoxContainer2/SFX" method="_on_value_changed"]
-[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer3/Music" to="settingsScreen/volume/HBoxContainer3/Music" method="_on_value_changed"]
+[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer/Master" to="." method="_on_master_value_changed"]
+[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer2/SFX" to="." method="_on_sfx_value_changed"]
+[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer3/Music" to="." method="_on_music_value_changed"]
+[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer4/Voice" to="." method="_on_voice_value_changed"]
 [connection signal="value_changed" from="settingsScreen/volume/HBoxContainer4/Voice" to="settingsScreen/volume/HBoxContainer4/Voice" method="_on_value_changed"]
 [connection signal="pressed" from="settingsScreen/volume/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="settingsScreen/Language/HBoxContainer/VBoxContainer/AspectRatioContainer/fr" to="." method="_on_fr_pressed"]

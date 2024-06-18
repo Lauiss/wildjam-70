@@ -18,6 +18,8 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		if settings_screen.visible:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE;
+			volume.hide()
+			language.hide()
 			pause_screen.show()
 			settings_screen.hide()
 		else:
@@ -103,3 +105,41 @@ func _on_fr_text_pressed():
 	voices.text = "text : French"
 	Global.language = "french"
 	click.play()
+
+
+@onready var sfx_preview = $settingsScreen/SFXPreview
+@onready var master_preview = $settingsScreen/MasterPreview
+@onready var music_preview = $settingsScreen/MusicPreview
+@onready var voice_preview = $settingsScreen/VoicePreview
+
+
+func _on_voice_value_changed(value):
+	if value <= -15:
+		value -= 100
+	AudioServer.set_bus_volume_db(3, value)
+	print(value)
+	voice_preview.play()
+
+
+func _on_music_value_changed(value):
+	if value <= -15:
+		value -= 100
+	AudioServer.set_bus_volume_db(2, value)
+	print(value)
+	music_preview.play()
+
+
+func _on_sfx_value_changed(value):
+	if value <= -15:
+		value -= 100
+	AudioServer.set_bus_volume_db(1, value)
+	print(value)
+	sfx_preview.play()
+
+
+func _on_master_value_changed(value):
+	if value <= -15:
+		value -= 100
+	AudioServer.set_bus_volume_db(0, value)
+	print(value)
+	master_preview.play()
