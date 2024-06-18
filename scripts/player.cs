@@ -7,7 +7,7 @@ public partial class player : CharacterBody3D
 	public float SPEED;
 	public float WALK_SPEED;
 	public float SPRINT_SPEED;
-	public float JUMPVELOCITY;
+	public float JUMP_VELOCITY;
 	private global_variables _global;
 	public float GRAVITY = 9.8f;
 	public float SENSITIVITY = 0.003f;
@@ -20,6 +20,7 @@ public partial class player : CharacterBody3D
 	private Node3D _head;
 	private Camera3D _camera;
 	private Control _pauseMenu;
+	private CollisionShape3D _collisionShape;
 	
 	private hand _hand; 
 	
@@ -28,10 +29,12 @@ public partial class player : CharacterBody3D
 		_camera = GetNode<Camera3D>("Head/Camera");
 		_hand = GetNode<hand>("Hand");
 		_global = GetTree().Root.GetNode<global_variables>("Global");
+		_collisionShape = GetNode<CollisionShape3D>("CollisionShape3D");
 		
 		WALK_SPEED = _global.WALK_SPEED;
 		SPRINT_SPEED = _global.SPRINT_SPEED;
-		JUMPVELOCITY = _global.JUMPVELOCITY;
+		JUMP_VELOCITY = _global.JUMP_VELOCITY;
+		_collisionShape.Scale *= new Vector3(1, 0.5f, 1);
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 	}
 	
@@ -44,7 +47,7 @@ public partial class player : CharacterBody3D
 			velocity.Y -= GRAVITY * (float)delta;
 
 		if (Input.IsActionJustPressed("jump") && IsOnFloor()){
-			velocity.Y = JUMPVELOCITY;
+			velocity.Y = JUMP_VELOCITY;
 		}
 			
 		if (Input.IsActionPressed("sprint")){

@@ -17,9 +17,16 @@ public partial class character_selection : Control
 	
 	private void LoadSceneWithCharacter()
 	{
-		_global.WALK_SPEED = 5.0f;
-		_global.SPRINT_SPEED = 10.0f;
-		_global.JUMPVELOCITY = 4.5f;
+		// last param vector is to manage size of the character
+		SetCharacterVariables(5.0f, 10.0f, 4.5f, new Vector3(1,1,1));
 		_global.GotoScene("res://scenes/playground.tscn");
+	}
+	
+	private void SetCharacterVariables(float WalkS, float SprintS, float Jvelocity, Vector3 CharSize)
+	{
+		_global.WALK_SPEED = WalkS;
+		_global.SPRINT_SPEED = SprintS;
+		_global.JUMP_VELOCITY = Jvelocity;
+		_global.CHARACTER_SIZE = CharSize;
 	}
 }
