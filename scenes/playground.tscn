@@ -86,3 +86,4 @@ size = Vector3(2, 1, 1)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Pause_menu" parent="CanvasLayer" instance=ExtResource("2_2fsvr")]
+visible = false

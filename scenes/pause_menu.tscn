@@ -167,13 +167,14 @@ theme = ExtResource("2_xy2g6")
 theme_override_font_sizes/font_size = 16
 text = "Main : "
 
-[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer"]
+[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer" node_paths=PackedStringArray("sfx_preview")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_xy2g6")
 value = 100.0
 script = ExtResource("4_qrtad")
+sfx_preview = NodePath("../../../../Master")
 bus_name = "Master"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="settingsScreen/volume"]
@@ -185,13 +186,15 @@ theme = ExtResource("2_xy2g6")
 theme_override_font_sizes/font_size = 16
 text = "SFX : "
 
-[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer2"]
+[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer2" node_paths=PackedStringArray("sfx_preview")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_xy2g6")
 value = 31.0
 script = ExtResource("4_qrtad")
+sfx_preview = NodePath("../../../../SFX")
+bus_name = "SFX"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -202,12 +205,14 @@ theme = ExtResource("2_xy2g6")
 theme_override_font_sizes/font_size = 16
 text = "Music :"
 
-[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer3"]
+[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer3" node_paths=PackedStringArray("sfx_preview")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_xy2g6")
 script = ExtResource("4_qrtad")
+sfx_preview = NodePath("../../../../Music")
+bus_name = "Music"
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -218,13 +223,15 @@ theme = ExtResource("2_xy2g6")
 theme_override_font_sizes/font_size = 16
 text = "Dogs : "
 
-[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer4"]
+[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer4" node_paths=PackedStringArray("sfx_preview")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_xy2g6")
 value = 68.0
 script = ExtResource("4_qrtad")
+sfx_preview = NodePath("../../../../Voice")
+bus_name = "Voice"
 
 [node name="Back" type="Button" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -237,7 +244,19 @@ theme_override_fonts/font = ExtResource("4_bx4qo")
 theme_override_font_sizes/font_size = 32
 text = "Back to Menu"
 
-[node name="SFXPreview" type="AudioStreamPlayer" parent="settingsScreen"]
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ffx4y")
+bus = &"SFX"
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ffx4y")
+bus = &"Music"
+
+[node name="Voice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ffx4y")
+bus = &"Voice"
+
+[node name="Master" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_ffx4y")
 
 [connection signal="pressed" from="pauseScreen/pauseContainer/settings" to="." method="_on_settings_pressed"]
@@ -248,8 +267,4 @@ stream = ExtResource("6_ffx4y")
 [connection signal="pressed" from="settingsScreen/default/Language" to="." method="_on_language_pressed"]
 [connection signal="pressed" from="settingsScreen/default/Volume" to="." method="_on_volume_pressed"]
 [connection signal="pressed" from="settingsScreen/default/Back" to="." method="_on_back_pressed"]
-[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer/HSlider" to="settingsScreen/volume/HBoxContainer/HSlider" method="_on_value_changed"]
-[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer2/HSlider" to="settingsScreen/volume/HBoxContainer2/HSlider" method="_on_value_changed"]
-[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer3/HSlider" to="settingsScreen/volume/HBoxContainer3/HSlider" method="_on_value_changed"]
-[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer4/HSlider" to="settingsScreen/volume/HBoxContainer4/HSlider" method="_on_value_changed"]
 [connection signal="pressed" from="settingsScreen/volume/Back" to="." method="_on_back_pressed"]
