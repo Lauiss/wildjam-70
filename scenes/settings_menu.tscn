@@ -1,64 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://mrliintxpa5e"]
+[gd_scene load_steps=5 format=3 uid="uid://mrliintxpa5e"]
 
 [ext_resource type="Theme" uid="uid://c1smofwrfjxpt" path="res://UI/default_UI.tres" id="1_71inf"]
 [ext_resource type="FontFile" uid="uid://dks3mplpwqwc5" path="res://Fonts/ChardinDoihleExpanded-1GW8v.ttf" id="2_j6ck5"]
 [ext_resource type="FontFile" uid="uid://b7osbfk2po1xx" path="res://Fonts/ChardinDoihle-8Mpwn.ttf" id="2_s7w1x"]
-
-[sub_resource type="CSharpScript" id="CSharpScript_y86gd"]
-script/source = "using Godot;
-using System;
-
-public partial class settings_menu : Control
-{
-	private Control settings;
-	private Control volume;
-	private Control pause;
-	private Control _settingsMenu;
-	
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-		settings = GetNode<Control>(\"settingsScreen/default\");
-		volume = GetNode<Control>(\"settingsScreen/volume\");
-		pause = GetNode<Control>(\"../pauseScreen\");
-		_settingsMenu = GetNode<Control>(\"settingsScreen\");
-		Hide();
-	}
-
-	public override void _Process(double delta)
-	{
-		if(settings.Visible){
-			if(Input.IsActionJustPressed(\"escape\")){
-				Return();
-			}
-		}
-	}
-		
-	private void Return()
-	{
-		// Hide visible tabs, show settings tab, or show pause and hide settings if the current tab is already settings
-		if (settings.Visible)
-		{
-			pause.Show();
-			_settingsMenu.Hide();
-			settings.Hide();
-			Hide();
-		}
-		else
-		{
-			volume.Hide();
-			settings.Show();
-		}
-	}
-	
-	private void OpenVolumeTab()
-	{
-		// Show volume tab, hide all other tabs
-		settings.Hide();
-		volume.Show();
-	}
-}
-"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e5lhn"]
 bg_color = Color(0.882353, 0.458824, 0.266667, 1)
@@ -73,14 +17,13 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[node name="settings_menu" type="Control"]
+[node name="setting_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = SubResource("CSharpScript_y86gd")
 
 [node name="settingsScreen" type="MarginContainer" parent="."]
 layout_mode = 1

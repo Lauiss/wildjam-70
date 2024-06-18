@@ -19,7 +19,7 @@ public partial class character_selection : Control
 	{
 		// last param vector is to manage size of the character
 		SetCharacterVariables(5.0f, 10.0f, 4.5f, new Vector3(1,1,1));
-		_global.GotoScene("res://scenes/playground.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/playground.tscn");
 	}
 	
 	private void SetCharacterVariables(float WalkS, float SprintS, float Jvelocity, Vector3 CharSize)

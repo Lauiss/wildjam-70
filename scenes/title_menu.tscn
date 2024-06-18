@@ -4,9 +4,9 @@
 [ext_resource type="Theme" uid="uid://c1smofwrfjxpt" path="res://UI/default_UI.tres" id="2_7qmhy"]
 [ext_resource type="FontFile" uid="uid://dks3mplpwqwc5" path="res://Fonts/ChardinDoihleExpanded-1GW8v.ttf" id="3_vw8a0"]
 [ext_resource type="FontFile" uid="uid://b7osbfk2po1xx" path="res://Fonts/ChardinDoihle-8Mpwn.ttf" id="4_a7vwk"]
-[ext_resource type="Texture2D" uid="uid://3bvsuvjhd3yd" path="res://UI/banner.png" id="5_0pmu0"]
+[ext_resource type="Texture2D" path="res://UI/banner.png" id="5_0pmu0"]
 [ext_resource type="Script" path="res://scripts/volume.gd" id="5_ircyo"]
-[ext_resource type="AudioStream" uid="uid://ofhlh3wruqrr" path="res://SFX/volume.mp3" id="6_i2wqo"]
+[ext_resource type="AudioStream" path="res://SFX/volume.mp3" id="6_i2wqo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dy8uv"]
 bg_color = Color(0.882353, 0.458824, 0.266667, 1)
@@ -47,13 +47,20 @@ texture = ExtResource("5_0pmu0")
 region_enabled = true
 region_rect = Rect2(0, 72.4475, 1152, 398.738)
 
-[node name="pauseScreen" type="AspectRatioContainer" parent="."]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 314.0
-offset_right = 444.0
-offset_bottom = 764.0
-scale = Vector2(0.725, 0.725)
+[node name="pauseScreen" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -678.0
+offset_top = -120.0
+offset_right = -119.0
+offset_bottom = 314.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(223, 234)
 
 [node name="pauseContainer" type="VBoxContainer" parent="pauseScreen"]
 layout_mode = 2
@@ -141,21 +148,19 @@ vertical_alignment = 1
 [node name="HBoxContainer" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
 
-[node name="Master" type="Label" parent="settingsScreen/volume/HBoxContainer"]
+[node name="VolumePercentageLabel" type="Label" parent="settingsScreen/volume/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_7qmhy")
 theme_override_font_sizes/font_size = 16
 text = "Main : "
 
-[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer" node_paths=PackedStringArray("sfx_preview")]
+[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_7qmhy")
 value = 100.0
 script = ExtResource("5_ircyo")
-sfx_preview = NodePath("../../../SFX")
-bus_name = "Master"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -166,15 +171,13 @@ theme = ExtResource("2_7qmhy")
 theme_override_font_sizes/font_size = 16
 text = "SFX : "
 
-[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer2" node_paths=PackedStringArray("sfx_preview")]
+[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_7qmhy")
 value = 31.0
 script = ExtResource("5_ircyo")
-sfx_preview = NodePath("../../../SFX")
-bus_name = "Volume"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -185,14 +188,12 @@ theme = ExtResource("2_7qmhy")
 theme_override_font_sizes/font_size = 16
 text = "Music :"
 
-[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer3" node_paths=PackedStringArray("sfx_preview")]
+[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_7qmhy")
 script = ExtResource("5_ircyo")
-sfx_preview = NodePath("../../../Music")
-bus_name = "Music"
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -203,15 +204,13 @@ theme = ExtResource("2_7qmhy")
 theme_override_font_sizes/font_size = 16
 text = "Dogs : "
 
-[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer4" node_paths=PackedStringArray("sfx_preview")]
+[node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer4"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = ExtResource("2_7qmhy")
 value = 68.0
 script = ExtResource("5_ircyo")
-sfx_preview = NodePath("../../../Voice")
-bus_name = "Voice"
 
 [node name="Back" type="Button" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -224,19 +223,7 @@ theme_override_fonts/font = ExtResource("4_a7vwk")
 theme_override_font_sizes/font_size = 32
 text = "Back to Menu"
 
-[node name="SFX" type="AudioStreamPlayer" parent="settingsScreen"]
-stream = ExtResource("6_i2wqo")
-bus = &"SFX"
-
-[node name="Music" type="AudioStreamPlayer" parent="settingsScreen"]
-stream = ExtResource("6_i2wqo")
-bus = &"Music"
-
-[node name="Voice" type="AudioStreamPlayer" parent="settingsScreen"]
-stream = ExtResource("6_i2wqo")
-bus = &"Voice"
-
-[node name="Master" type="AudioStreamPlayer" parent="settingsScreen"]
+[node name="SFXPreview" type="AudioStreamPlayer" parent="settingsScreen"]
 stream = ExtResource("6_i2wqo")
 
 [connection signal="pressed" from="pauseScreen/pauseContainer/play" to="." method="_on_play_pressed"]
