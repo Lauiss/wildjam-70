@@ -34,7 +34,7 @@ public partial class player : CharacterBody3D
 		WALK_SPEED = _global.WALK_SPEED;
 		SPRINT_SPEED = _global.SPRINT_SPEED;
 		JUMP_VELOCITY = _global.JUMP_VELOCITY;
-		_collisionShape.Scale *= new Vector3(1,1,1);
+		_collisionShape.Scale *= new Vector3(1, 0.5f, 1);
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 	}
 	

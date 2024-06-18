@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dks3mplpwqwc5"
-path="res://.godot/imported/ChardinDoihleExpanded-1GW8v.ttf-ee96deab44d34cd8acc464099052f962.fontdata"
+uid="uid://bq8r4d0slkunt"
+path="res://.godot/imported/Saira-Italic-VariableFont_wdth,wght.ttf-c24f96e6a029fcee0ad1d0c0e8044a55.fontdata"
 
 [deps]
 
-source_file="res://Fonts/ChardinDoihleExpanded-1GW8v.ttf"
-dest_files=["res://.godot/imported/ChardinDoihleExpanded-1GW8v.ttf-ee96deab44d34cd8acc464099052f962.fontdata"]
+source_file="res://Fonts/Saira-Italic-VariableFont_wdth,wght.ttf"
+dest_files=["res://.godot/imported/Saira-Italic-VariableFont_wdth,wght.ttf-c24f96e6a029fcee0ad1d0c0e8044a55.fontdata"]
 
 [params]
 

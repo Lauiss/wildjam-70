@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b5b2jmdq0rpra" path="res://UI/frame_panel.png" id="2_f4m06"]
 [ext_resource type="Texture2D" uid="uid://dpprtbwq1rtom" path="res://UI/grabber.png" id="2_gi7n6"]
 [ext_resource type="Texture2D" uid="uid://yx6hy2n1ff53" path="res://UI/grabber_high.png" id="3_ecwjj"]
-[ext_resource type="FontFile" uid="uid://b7osbfk2po1xx" path="res://Fonts/ChardinDoihle-8Mpwn.ttf" id="4_0a17p"]
+[ext_resource type="FontFile" uid="uid://dewdp38evbxog" path="res://Fonts/BebasNeue-Regular.ttf" id="4_fa07i"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fn27t"]
 texture_margin_left = 32.0
@@ -63,7 +63,14 @@ texture_margin_right = 15.0
 texture_margin_bottom = 22.0
 region_rect = Rect2(5, 26, 112, 43)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8wnpt"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6h6k"]
+bg_color = Color(0, 0, 0, 0.12549)
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_voe7n"]
 texture = ExtResource("2_f4m06")
@@ -90,7 +97,7 @@ expand_margin_bottom = 50.0
 region_rect = Rect2(0, 0, 256, 256)
 
 [resource]
-default_font = ExtResource("4_0a17p")
+default_font = ExtResource("4_fa07i")
 default_font_size = 0
 AcceptDialog/styles/panel = SubResource("StyleBoxTexture_fn27t")
 Button/styles/disabled = SubResource("StyleBoxTexture_8bl0n")
@@ -111,12 +118,12 @@ Label/colors/font_color = Color(1, 1, 1, 1)
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/colors/font_shadow_color = Color(0, 0, 0, 1)
 Label/constants/line_spacing = 0
-Label/constants/outline_size = 5
+Label/constants/outline_size = 0
 Label/constants/shadow_offset_x = 0
 Label/constants/shadow_offset_y = 0
 Label/constants/shadow_outline_size = 0
 Label/font_sizes/font_size = 16
-Label/fonts/font = ExtResource("4_0a17p")
-Label/styles/normal = SubResource("StyleBoxEmpty_8wnpt")
+Label/fonts/font = ExtResource("4_fa07i")
+Label/styles/normal = SubResource("StyleBoxFlat_j6h6k")
 Panel/styles/panel = SubResource("StyleBoxTexture_voe7n")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_yoy6j")

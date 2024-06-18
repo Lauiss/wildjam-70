@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_npqiy"]
 [ext_resource type="Theme" uid="uid://c1smofwrfjxpt" path="res://UI/default_UI.tres" id="2_xy2g6"]
-[ext_resource type="FontFile" uid="uid://dks3mplpwqwc5" path="res://Fonts/ChardinDoihleExpanded-1GW8v.ttf" id="3_36ue7"]
-[ext_resource type="FontFile" uid="uid://b7osbfk2po1xx" path="res://Fonts/ChardinDoihle-8Mpwn.ttf" id="4_bx4qo"]
+[ext_resource type="FontFile" path="res://Fonts/ChardinDoihleExpanded-1GW8v.ttf" id="3_36ue7"]
+[ext_resource type="FontFile" uid="uid://cl7o2bjohxf44" path="res://Fonts/Monoton-Regular.ttf" id="4_abbg1"]
 [ext_resource type="Script" path="res://scripts/volume.gd" id="4_qrtad"]
-[ext_resource type="AudioStream" path="res://SFX/volume.mp3" id="6_ffx4y"]
+[ext_resource type="AudioStream" uid="uid://ofhlh3wruqrr" path="res://SFX/volume.mp3" id="6_ffx4y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_va6re"]
 bg_color = Color(0.882353, 0.458824, 0.266667, 1)
@@ -20,7 +20,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_41yaf"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ofvo4"]
 bg_color = Color(0.882353, 0.458824, 0.266667, 1)
 border_width_left = 20
 border_width_top = 20
@@ -44,6 +44,7 @@ grow_vertical = 2
 script = ExtResource("1_npqiy")
 
 [node name="pauseScreen" type="MarginContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -98,7 +99,6 @@ theme_override_font_sizes/font_size = 36
 text = "Main menu"
 
 [node name="settingsScreen" type="MarginContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -119,6 +119,7 @@ layout_mode = 2
 theme = ExtResource("2_xy2g6")
 
 [node name="default" type="VBoxContainer" parent="settingsScreen"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 20
@@ -150,9 +151,9 @@ theme_override_constants/separation = 20
 [node name="Label" type="Label" parent="settingsScreen/volume"]
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_36ue7")
+theme_override_fonts/font = ExtResource("4_abbg1")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/normal = SubResource("StyleBoxFlat_41yaf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ofvo4")
 text = "Volume"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -163,7 +164,7 @@ layout_mode = 2
 [node name="VolumePercentageLabel" type="Label" parent="settingsScreen/volume/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_xy2g6")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 32
 text = "Main : "
 
 [node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer"]
@@ -181,7 +182,7 @@ layout_mode = 2
 [node name="SFX" type="Label" parent="settingsScreen/volume/HBoxContainer2"]
 layout_mode = 2
 theme = ExtResource("2_xy2g6")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 32
 text = "SFX : "
 
 [node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer2"]
@@ -198,7 +199,7 @@ layout_mode = 2
 [node name="Music" type="Label" parent="settingsScreen/volume/HBoxContainer3"]
 layout_mode = 2
 theme = ExtResource("2_xy2g6")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 32
 text = "Music :"
 
 [node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer3"]
@@ -214,7 +215,7 @@ layout_mode = 2
 [node name="Dogs" type="Label" parent="settingsScreen/volume/HBoxContainer4"]
 layout_mode = 2
 theme = ExtResource("2_xy2g6")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 32
 text = "Dogs : "
 
 [node name="HSlider" type="HSlider" parent="settingsScreen/volume/HBoxContainer4"]
@@ -230,9 +231,46 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("2_xy2g6")
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("4_bx4qo")
+theme_override_font_sizes/font_size = 32
+text = "Back to Menu"
+
+[node name="Language" type="VBoxContainer" parent="settingsScreen"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="settingsScreen/Language"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_abbg1")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_ofvo4")
+text = "Language"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="settingsScreen/Language"]
+layout_mode = 2
+
+[node name="Dogs" type="Label" parent="settingsScreen/Language/HBoxContainer4"]
+layout_mode = 2
+theme = ExtResource("2_xy2g6")
+theme_override_font_sizes/font_size = 32
+text = "Dogs : "
+
+[node name="HSlider" type="HSlider" parent="settingsScreen/Language/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource("2_xy2g6")
+value = 68.0
+script = ExtResource("4_qrtad")
+
+[node name="Back" type="Button" parent="settingsScreen/Language"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_xy2g6")
 theme_override_font_sizes/font_size = 32
 text = "Back to Menu"
 
@@ -240,9 +278,8 @@ text = "Back to Menu"
 stream = ExtResource("6_ffx4y")
 
 [connection signal="pressed" from="pauseScreen/pauseContainer/settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="pauseScreen/pauseContainer/resume" to="." method="Resume"]
 [connection signal="pressed" from="pauseScreen/pauseContainer/resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="pauseScreen/pauseContainer/mainMenu" to="." method="OpenMainMenu"]
+[connection signal="pressed" from="pauseScreen/pauseContainer/resume" to="." method="Resume"]
 [connection signal="pressed" from="pauseScreen/pauseContainer/mainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="settingsScreen/default/Language" to="." method="_on_language_pressed"]
 [connection signal="pressed" from="settingsScreen/default/Volume" to="." method="_on_volume_pressed"]
@@ -252,3 +289,5 @@ stream = ExtResource("6_ffx4y")
 [connection signal="value_changed" from="settingsScreen/volume/HBoxContainer3/HSlider" to="settingsScreen/volume/HBoxContainer3/HSlider" method="_on_value_changed"]
 [connection signal="value_changed" from="settingsScreen/volume/HBoxContainer4/HSlider" to="settingsScreen/volume/HBoxContainer4/HSlider" method="_on_value_changed"]
 [connection signal="pressed" from="settingsScreen/volume/Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="settingsScreen/Language/HBoxContainer4/HSlider" to="settingsScreen/Language/HBoxContainer4/HSlider" method="_on_value_changed"]
+[connection signal="pressed" from="settingsScreen/Language/Back" to="." method="_on_back_pressed"]
