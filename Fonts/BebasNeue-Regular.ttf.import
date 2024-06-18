@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://2mc2sgofn23j"
-path="res://.godot/imported/ChardinDoihleItalic-Rp4eE.ttf-f5946e68159bfd5dc14f5c4edb871b27.fontdata"
+uid="uid://bntwy8qh4wgb0"
+path="res://.godot/imported/BebasNeue-Regular.ttf-be46cd620c0899273485af1b07870ddc.fontdata"
 
 [deps]
 
-source_file="res://Fonts/ChardinDoihleItalic-Rp4eE.ttf"
-dest_files=["res://.godot/imported/ChardinDoihleItalic-Rp4eE.ttf-f5946e68159bfd5dc14f5c4edb871b27.fontdata"]
+source_file="res://Fonts/BebasNeue-Regular.ttf"
+dest_files=["res://.godot/imported/BebasNeue-Regular.ttf-be46cd620c0899273485af1b07870ddc.fontdata"]
 
 [params]
 

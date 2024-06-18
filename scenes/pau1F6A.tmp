@@ -4,7 +4,6 @@
 [ext_resource type="Theme" uid="uid://c1smofwrfjxpt" path="res://UI/default_UI.tres" id="2_xy2g6"]
 [ext_resource type="FontFile" uid="uid://53vg4mdmgfxj" path="res://Fonts/Monoton-Regular.ttf" id="3_sycpf"]
 [ext_resource type="FontFile" uid="uid://bntwy8qh4wgb0" path="res://Fonts/BebasNeue-Regular.ttf" id="4_poywg"]
-[ext_resource type="Script" path="res://scripts/volume.gd" id="4_qrtad"]
 [ext_resource type="Texture2D" uid="uid://bl62en76gobmi" path="res://UI/fr.png" id="5_huua5"]
 [ext_resource type="Texture2D" uid="uid://brguj68y2sctg" path="res://UI/gb.png" id="6_7x1yt"]
 [ext_resource type="AudioStream" uid="uid://ofhlh3wruqrr" path="res://SFX/volume.mp3" id="6_ffx4y"]
@@ -21,6 +20,23 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
+
+[sub_resource type="GDScript" id="GDScript_dnqtf"]
+script/source = "extends HSlider
+@onready var sfx_preview = $\"../../../SFXPreview\"
+@export
+var bus_name: String
+
+var bus_index: int
+
+# func _ready() -> void:
+	# bus_index = AudioServer.get_bus_index(bus_name)
+	# value_changed.connect(_on_value_changed)
+
+# func _on_value_changed(value: float) -> void:
+	# AudioServer.set_bus_volume_db(bus_index, linear_to_db(value))
+	# sfx_preview.play()
+"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plory"]
 bg_color = Color(0, 0, 0, 0.392157)
@@ -187,7 +203,8 @@ theme = ExtResource("2_xy2g6")
 min_value = -15.0
 max_value = 15.0
 value = 15.0
-script = ExtResource("4_qrtad")
+script = SubResource("GDScript_dnqtf")
+bus_name = "Master"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -206,7 +223,8 @@ theme = ExtResource("2_xy2g6")
 min_value = -15.0
 max_value = 15.0
 value = 15.0
-script = ExtResource("4_qrtad")
+script = SubResource("GDScript_dnqtf")
+bus_name = "SFX"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -225,7 +243,8 @@ theme = ExtResource("2_xy2g6")
 min_value = -15.0
 max_value = 15.0
 value = 15.0
-script = ExtResource("4_qrtad")
+script = SubResource("GDScript_dnqtf")
+bus_name = "Music"
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
@@ -244,7 +263,8 @@ theme = ExtResource("2_xy2g6")
 min_value = -15.0
 max_value = 15.0
 value = 15.0
-script = ExtResource("4_qrtad")
+script = SubResource("GDScript_dnqtf")
+bus_name = "Voice"
 
 [node name="Back" type="Button" parent="settingsScreen/volume"]
 layout_mode = 2

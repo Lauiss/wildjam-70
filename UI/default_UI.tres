@@ -1,10 +1,11 @@
-[gd_resource type="Theme" load_steps=18 format=3 uid="uid://c1smofwrfjxpt"]
+[gd_resource type="Theme" load_steps=19 format=3 uid="uid://c1smofwrfjxpt"]
 
 [ext_resource type="Texture2D" uid="uid://drqw38k5f2ink" path="res://UI/ui_interactables.png" id="1_175ns"]
 [ext_resource type="Texture2D" uid="uid://b5b2jmdq0rpra" path="res://UI/frame_panel.png" id="2_f4m06"]
 [ext_resource type="Texture2D" uid="uid://dpprtbwq1rtom" path="res://UI/grabber.png" id="2_gi7n6"]
 [ext_resource type="Texture2D" uid="uid://yx6hy2n1ff53" path="res://UI/grabber_high.png" id="3_ecwjj"]
 [ext_resource type="FontFile" uid="uid://b7osbfk2po1xx" path="res://Fonts/ChardinDoihle-8Mpwn.ttf" id="4_0a17p"]
+[ext_resource type="FontFile" uid="uid://bntwy8qh4wgb0" path="res://Fonts/BebasNeue-Regular.ttf" id="6_hd8su"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fn27t"]
 texture_margin_left = 32.0
@@ -90,7 +91,7 @@ expand_margin_bottom = 50.0
 region_rect = Rect2(0, 0, 256, 256)
 
 [resource]
-default_font = ExtResource("4_0a17p")
+default_font = ExtResource("6_hd8su")
 default_font_size = 0
 AcceptDialog/styles/panel = SubResource("StyleBoxTexture_fn27t")
 Button/styles/disabled = SubResource("StyleBoxTexture_8bl0n")

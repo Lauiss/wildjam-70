@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dxuk5o0eqd2ry"
-path="res://.godot/imported/ChardinDoihleBold-6Y321.ttf-40ceb24d6f9e4f902d534bee787fb417.fontdata"
+uid="uid://53vg4mdmgfxj"
+path="res://.godot/imported/Monoton-Regular.ttf-ba611cc42982db275e9f35c5360f47be.fontdata"
 
 [deps]
 
-source_file="res://Fonts/ChardinDoihleBold-6Y321.ttf"
-dest_files=["res://.godot/imported/ChardinDoihleBold-6Y321.ttf-40ceb24d6f9e4f902d534bee787fb417.fontdata"]
+source_file="res://Fonts/Monoton-Regular.ttf"
+dest_files=["res://.godot/imported/Monoton-Regular.ttf-ba611cc42982db275e9f35c5360f47be.fontdata"]
 
 [params]
 
