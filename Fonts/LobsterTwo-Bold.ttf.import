@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bvhw06yg4s76j"
-path="res://.godot/imported/Lobster-Regular.ttf-290bc060344f50698d991bdecf4ea6c4.fontdata"
+uid="uid://1gon88cv8y35"
+path="res://.godot/imported/LobsterTwo-Bold.ttf-01ae98a602f7d90194bc129d121171ac.fontdata"
 
 [deps]
 
-source_file="res://Fonts/Lobster-Regular.ttf"
-dest_files=["res://.godot/imported/Lobster-Regular.ttf-290bc060344f50698d991bdecf4ea6c4.fontdata"]
+source_file="res://Fonts/LobsterTwo-Bold.ttf"
+dest_files=["res://.godot/imported/LobsterTwo-Bold.ttf-01ae98a602f7d90194bc129d121171ac.fontdata"]
 
 [params]
 
