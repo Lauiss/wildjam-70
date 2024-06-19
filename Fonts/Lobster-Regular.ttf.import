@@ -2,6 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
+<<<<<<<< HEAD:Fonts/Lobster-Regular.ttf.import
 uid="uid://cmq8wktiee0d6"
 path="res://.godot/imported/Lobster-Regular.ttf-290bc060344f50698d991bdecf4ea6c4.fontdata"
 
@@ -9,6 +10,15 @@ path="res://.godot/imported/Lobster-Regular.ttf-290bc060344f50698d991bdecf4ea6c4
 
 source_file="res://Fonts/Lobster-Regular.ttf"
 dest_files=["res://.godot/imported/Lobster-Regular.ttf-290bc060344f50698d991bdecf4ea6c4.fontdata"]
+========
+uid="uid://c1snpl3uyveg1"
+path="res://.godot/imported/LobsterTwo-Bold.ttf-01ae98a602f7d90194bc129d121171ac.fontdata"
+
+[deps]
+
+source_file="res://Fonts/LobsterTwo-Bold.ttf"
+dest_files=["res://.godot/imported/LobsterTwo-Bold.ttf-01ae98a602f7d90194bc129d121171ac.fontdata"]
+>>>>>>>> Lauiss:Fonts/LobsterTwo-Bold.ttf.import
 
 [params]
 

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dks3mplpwqwc5"
-path="res://.godot/imported/ChardinDoihleExpanded-1GW8v.ttf-ee96deab44d34cd8acc464099052f962.fontdata"
+uid="uid://b061p4pyyw2k4"
+path="res://.godot/imported/LobsterTwo-Regular.ttf-e95d47664b6c17a8b8eab9d407e772fa.fontdata"
 
 [deps]
 
-source_file="res://Fonts/ChardinDoihleExpanded-1GW8v.ttf"
-dest_files=["res://.godot/imported/ChardinDoihleExpanded-1GW8v.ttf-ee96deab44d34cd8acc464099052f962.fontdata"]
+source_file="res://Fonts/LobsterTwo-Regular.ttf"
+dest_files=["res://.godot/imported/LobsterTwo-Regular.ttf-e95d47664b6c17a8b8eab9d407e772fa.fontdata"]
 
 [params]
 
