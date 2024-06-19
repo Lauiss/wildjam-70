@@ -85,3 +85,35 @@ func _on_fr_text_pressed():
 	texts.text = "text : French"
 	Global.language = "french"
 	click.play()
+
+
+@onready var sfx_preview = $settingsScreen/SFXPreview
+@onready var master_preview = $settingsScreen/MasterPreview
+@onready var music_preview = $settingsScreen/MusicPreview
+@onready var voice_preview = $settingsScreen/VoicePreview
+
+func _on_voice_value_changed(value):
+	if value <= -15:
+		value -= 100
+	AudioServer.set_bus_volume_db(3, value)
+	voice_preview.play()
+
+func _on_music_value_changed(value):
+	if value <= -15:
+		value -= 100
+	AudioServer.set_bus_volume_db(2, value)
+	music_preview.play()
+
+
+func _on_sfx_value_changed(value):
+	if value <= -15:
+		value -= 100
+	AudioServer.set_bus_volume_db(1, value)
+	sfx_preview.play()
+
+
+func _on_master_value_changed(value):
+	if value <= -15:
+		value -= 100
+	AudioServer.set_bus_volume_db(0, value)
+	master_preview.play()

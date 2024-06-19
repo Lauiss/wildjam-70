@@ -12,9 +12,17 @@ var pause_menu
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED;
+	hide()
 	settings_screen.hide()
 
-func _process(delta):
+func resume_game():
+	click.play()
+	hide()
+	get_tree().paused = false
+	pause_screen.hide()
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func _physics_process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		if settings_screen.visible:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE;
@@ -35,13 +43,6 @@ func pause_game():
 	pause_screen.show()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
-func resume_game():
-	click.play()
-	hide()
-	get_tree().paused = false
-	pause_screen.hide()
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
 
 func _on_resume_pressed():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
@@ -60,11 +61,14 @@ func _on_main_menu_pressed():
 
 func _on_back_pressed():
 	click.play()
-	pause_screen.show()
-	settings_screen.hide()
-	volume.hide()
-	language.hide()
-
+	if default.visible:
+		pause_screen.show()
+		settings_screen.hide()
+	else:
+		default.show()
+		volume.hide()
+		language.hide()
+	
 func _on_volume_pressed():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
 	click.play()
@@ -96,13 +100,13 @@ func _on_none_pressed():
 
 
 func _on_en_text_pressed():
-	voices.text = "text : English"
+	texts.text = "text : English"
 	Global.language = "english"
 	click.play()
 
 
 func _on_fr_text_pressed():
-	voices.text = "text : French"
+	texts.text = "text : French"
 	Global.language = "french"
 	click.play()
 
@@ -112,20 +116,16 @@ func _on_fr_text_pressed():
 @onready var music_preview = $settingsScreen/MusicPreview
 @onready var voice_preview = $settingsScreen/VoicePreview
 
-
 func _on_voice_value_changed(value):
 	if value <= -15:
 		value -= 100
 	AudioServer.set_bus_volume_db(3, value)
-	print(value)
 	voice_preview.play()
-
 
 func _on_music_value_changed(value):
 	if value <= -15:
 		value -= 100
 	AudioServer.set_bus_volume_db(2, value)
-	print(value)
 	music_preview.play()
 
 
@@ -133,7 +133,6 @@ func _on_sfx_value_changed(value):
 	if value <= -15:
 		value -= 100
 	AudioServer.set_bus_volume_db(1, value)
-	print(value)
 	sfx_preview.play()
 
 
@@ -141,5 +140,5 @@ func _on_master_value_changed(value):
 	if value <= -15:
 		value -= 100
 	AudioServer.set_bus_volume_db(0, value)
-	print(value)
 	master_preview.play()
+

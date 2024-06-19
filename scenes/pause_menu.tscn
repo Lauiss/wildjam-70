@@ -201,6 +201,7 @@ text = "SFX : "
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+theme = ExtResource("2_xy2g6")
 min_value = -15.0
 max_value = 0.0
 step = 0.5
@@ -443,8 +444,8 @@ bus = &"Voice"
 stream = ExtResource("6_ffx4y")
 
 [connection signal="pressed" from="pauseScreen/pauseContainer/settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="pauseScreen/pauseContainer/resume" to="." method="Resume"]
 [connection signal="pressed" from="pauseScreen/pauseContainer/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="pauseScreen/pauseContainer/resume" to="." method="Resume"]
 [connection signal="pressed" from="pauseScreen/pauseContainer/mainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="settingsScreen/default/Language" to="." method="_on_language_pressed"]
 [connection signal="pressed" from="settingsScreen/default/Volume" to="." method="_on_volume_pressed"]
@@ -458,8 +459,6 @@ stream = ExtResource("6_ffx4y")
 [connection signal="pressed" from="settingsScreen/Language/HBoxContainer/VBoxContainer/AspectRatioContainer/fr" to="." method="_on_fr_pressed"]
 [connection signal="pressed" from="settingsScreen/Language/HBoxContainer/VBoxContainer2/AspectRatioContainer/en" to="." method="_on_en_pressed"]
 [connection signal="pressed" from="settingsScreen/Language/HBoxContainer/VBoxContainer3/AspectRatioContainer/none" to="." method="_on_none_pressed"]
-[connection signal="pressed" from="settingsScreen/Language/HBoxContainer2/VBoxContainer/AspectRatioContainer/fr_text" to="." method="_on_fr_pressed"]
 [connection signal="pressed" from="settingsScreen/Language/HBoxContainer2/VBoxContainer/AspectRatioContainer/fr_text" to="." method="_on_fr_text_pressed"]
 [connection signal="pressed" from="settingsScreen/Language/HBoxContainer2/VBoxContainer2/AspectRatioContainer/en_text" to="." method="_on_en_text_pressed"]
-[connection signal="pressed" from="settingsScreen/Language/HBoxContainer2/VBoxContainer2/AspectRatioContainer/en_text" to="." method="_on_en_pressed"]
 [connection signal="pressed" from="settingsScreen/Language/Back" to="." method="_on_back_pressed"]
