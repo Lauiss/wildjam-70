@@ -90,7 +90,7 @@ public partial class player : CharacterBody3D
  		if (Input.IsActionPressed("interact")){
 			GD.Print("Interaction");	
 		}
-	}
+	} 
 	
 	private void HandleCameraMovement(InputEventMouseMotion mouseMotion){
 		// modify accumulated mouse rotation
