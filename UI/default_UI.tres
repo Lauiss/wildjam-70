@@ -1,7 +1,10 @@
-[gd_resource type="Theme" load_steps=15 format=3 uid="uid://c1smofwrfjxpt"]
+[gd_resource type="Theme" load_steps=18 format=3 uid="uid://c1smofwrfjxpt"]
 
 [ext_resource type="Texture2D" uid="uid://drqw38k5f2ink" path="res://UI/ui_interactables.png" id="1_175ns"]
 [ext_resource type="Texture2D" uid="uid://b5b2jmdq0rpra" path="res://UI/frame_panel.png" id="2_f4m06"]
+[ext_resource type="Texture2D" uid="uid://dpprtbwq1rtom" path="res://UI/grabber.png" id="2_gi7n6"]
+[ext_resource type="Texture2D" uid="uid://yx6hy2n1ff53" path="res://UI/grabber_high.png" id="3_ecwjj"]
+[ext_resource type="FontFile" uid="uid://bntwy8qh4wgb0" path="res://Fonts/BebasNeue-Regular.ttf" id="6_hd8su"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fn27t"]
 texture_margin_left = 32.0
@@ -40,13 +43,13 @@ texture_margin_right = 12.0
 texture_margin_bottom = 33.0
 region_rect = Rect2(142, 26, 98, 43)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hfgt5"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfv6d"]
 texture = ExtResource("1_175ns")
-texture_margin_left = 62.0
-texture_margin_top = 59.0
-texture_margin_right = 62.0
-texture_margin_bottom = 63.0
-region_rect = Rect2(698, 119, 499, 213)
+texture_margin_left = 12.0
+texture_margin_top = 32.0
+texture_margin_right = 12.0
+texture_margin_bottom = 33.0
+region_rect = Rect2(142, 26, 98, 43)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_so0f2"]
 
@@ -87,18 +90,19 @@ expand_margin_bottom = 50.0
 region_rect = Rect2(0, 0, 256, 256)
 
 [resource]
+default_font = ExtResource("6_hd8su")
 default_font_size = 0
 AcceptDialog/styles/panel = SubResource("StyleBoxTexture_fn27t")
 Button/styles/disabled = SubResource("StyleBoxTexture_8bl0n")
 Button/styles/focus = SubResource("StyleBoxTexture_hjab3")
 Button/styles/hover = SubResource("StyleBoxTexture_skjq1")
 Button/styles/normal = SubResource("StyleBoxTexture_f0cua")
-Button/styles/pressed = SubResource("StyleBoxTexture_hfgt5")
+Button/styles/pressed = SubResource("StyleBoxTexture_sfv6d")
 HSlider/constants/center_grabber = 0
 HSlider/constants/grabber_offset = 0
-HSlider/icons/grabber = null
+HSlider/icons/grabber = ExtResource("2_gi7n6")
 HSlider/icons/grabber_disabled = null
-HSlider/icons/grabber_highlight = null
+HSlider/icons/grabber_highlight = ExtResource("3_ecwjj")
 HSlider/icons/tick = null
 HSlider/styles/grabber_area = SubResource("StyleBoxEmpty_so0f2")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxEmpty_g8nu1")
@@ -107,12 +111,12 @@ Label/colors/font_color = Color(1, 1, 1, 1)
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/colors/font_shadow_color = Color(0, 0, 0, 1)
 Label/constants/line_spacing = 0
-Label/constants/outline_size = 5
+Label/constants/outline_size = 0
 Label/constants/shadow_offset_x = 0
 Label/constants/shadow_offset_y = 0
 Label/constants/shadow_outline_size = 0
 Label/font_sizes/font_size = 16
-Label/fonts/font = null
+Label/fonts/font = ExtResource("6_hd8su")
 Label/styles/normal = SubResource("StyleBoxEmpty_8wnpt")
 Panel/styles/panel = SubResource("StyleBoxTexture_voe7n")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_yoy6j")

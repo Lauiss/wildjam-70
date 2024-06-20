@@ -1,8 +1,12 @@
 using Godot;
 using System;
 
+
 public partial class hand : Control
 {
+	[Signal]
+	public delegate void ClickedWithHandEventHandler();
+
 	private bool IsShowed;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -17,6 +21,11 @@ public partial class hand : Control
 		if (Input.IsActionJustPressed("showhand")){
 			ChangeVisibility();
 		}
+		
+		if(IsShowed && Input.IsActionJustPressed("holdordrop")){
+			GD.Print("ok zoomer");
+			//EmitSignal(SignalName.ClickedWithHandEventHandler);
+		}
 	}
 	
 	public void ChangeVisibility(){
@@ -25,7 +34,6 @@ public partial class hand : Control
 	}
 	
 	public void ShowHand(){
-		GD.Print(IsShowed);
 		if(IsShowed){
 			Show();
 		} else {
