@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://scripts/title_menu.gd" id="1_gnegl"]
 [ext_resource type="Theme" uid="uid://c1smofwrfjxpt" path="res://UI/default_UI.tres" id="2_7qmhy"]
-[ext_resource type="FontFile" uid="uid://dks3mplpwqwc5" path="res://Fonts/ChardinDoihleExpanded-1GW8v.ttf" id="3_vw8a0"]
+[ext_resource type="FontFile" path="res://Fonts/ChardinDoihleExpanded-1GW8v.ttf" id="3_vw8a0"]
 [ext_resource type="FontFile" uid="uid://b7osbfk2po1xx" path="res://Fonts/ChardinDoihle-8Mpwn.ttf" id="4_a7vwk"]
-[ext_resource type="Texture2D" path="res://UI/banner.png" id="5_0pmu0"]
+[ext_resource type="Texture2D" uid="uid://3bvsuvjhd3yd" path="res://UI/banner.png" id="5_0pmu0"]
 [ext_resource type="Script" path="res://scripts/volume.gd" id="5_ircyo"]
-[ext_resource type="AudioStream" path="res://SFX/volume.mp3" id="6_i2wqo"]
+[ext_resource type="AudioStream" uid="uid://ofhlh3wruqrr" path="res://SFX/volume.mp3" id="6_i2wqo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dy8uv"]
 bg_color = Color(0.882353, 0.458824, 0.266667, 1)
