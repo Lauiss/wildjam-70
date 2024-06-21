@@ -28,13 +28,13 @@ public partial class player : CharacterBody3D
 		_head = GetNode<Node3D>("Head");
 		_camera = GetNode<Camera3D>("Head/Camera");
 		_hand = GetNode<hand>("Hand");
-		_global = GetTree().Root.GetNode<global_variables>("GlobalVariables");
+		_global = GetTree().Root.GetNode<global_variables>("Global");
 		_collisionShape = GetNode<CollisionShape3D>("CollisionShape3D");
 		
 		WALK_SPEED = _global.WALK_SPEED;
 		SPRINT_SPEED = _global.SPRINT_SPEED;
 		JUMP_VELOCITY = _global.JUMP_VELOCITY;
-		_collisionShape.Scale *= new Vector3(1,1,1);
+		_collisionShape.Scale *= new Vector3(1, 0.5f, 1);
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 	}
 	
@@ -90,7 +90,7 @@ public partial class player : CharacterBody3D
  		if (Input.IsActionPressed("interact")){
 			GD.Print("Interaction");	
 		}
-	} 
+	}
 	
 	private void HandleCameraMovement(InputEventMouseMotion mouseMotion){
 		// modify accumulated mouse rotation
