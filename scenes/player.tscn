@@ -26,3 +26,11 @@ shape = SubResource("ConvexPolygonShape3D_aoi7c")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68755, 0)
 
 [node name="Camera" type="Camera3D" parent="Head"]
+
+[node name="Walk" type="AudioStreamPlayer3D" parent="."]
+
+[node name="Jump" type="AudioStreamPlayer3D" parent="."]
+
+[node name="Talk" type="AudioStreamPlayer3D" parent="."]
+
+[node name="Hurt" type="AudioStreamPlayer3D" parent="."]

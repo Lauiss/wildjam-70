@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cadhfpexfxl3k"
+path="res://.godot/imported/Cough (12).wav-c392e717655b9d4def676b507596e39e.sample"
+
+[deps]
+
+source_file="res://SFX/toux/Cough (12).wav"
+dest_files=["res://.godot/imported/Cough (12).wav-c392e717655b9d4def676b507596e39e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
