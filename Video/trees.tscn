@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvle5ocfyqe4u"]
+
+[ext_resource type="PackedScene" uid="uid://csrgi3ca8oe3m" path="res://treefinish.glb" id="1_3vgob"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="treefinish" parent="." instance=ExtResource("1_3vgob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.373309, 1.19209e-07, -0.183423)
+
+[node name="treefinish" parent="treefinish" instance=ExtResource("1_3vgob")]
+transform = Transform3D(1.89576, 0, 0, 0, 1.89576, 0, 0, 0, 1.89576, -14.2497, -4.67161, 24.4483)
+
+[node name="treefinish2" parent="treefinish" instance=ExtResource("1_3vgob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8001, 0.139748, 10.637)
+
+[node name="treefinish" parent="treefinish/treefinish2" instance=ExtResource("1_3vgob")]
+transform = Transform3D(1.89576, 0, 0, 0, 0.867429, 0, 0, 0, 1.89576, -14.2497, -4.67161, 24.4483)
+
+[node name="treefinish3" parent="treefinish" instance=ExtResource("1_3vgob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.1229, 1.19209e-07, -0.183423)
+
+[node name="treefinish" parent="treefinish/treefinish3" instance=ExtResource("1_3vgob")]
+transform = Transform3D(1.89576, 0, 0, 0, 1.89576, 0, 0, 0, 1.89576, -14.2497, -4.67161, 24.4483)
+
+[node name="treefinish2" parent="treefinish/treefinish3" instance=ExtResource("1_3vgob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8001, 0.139748, 10.637)
+
+[node name="treefinish" parent="treefinish/treefinish3/treefinish2" instance=ExtResource("1_3vgob")]
+transform = Transform3D(1.89576, 0, 0, 0, 0.867429, 0, 0, 0, 1.89576, -14.2497, -4.67161, 24.4483)
+
+[node name="treefinish4" parent="treefinish" instance=ExtResource("1_3vgob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.9936, -7.32234, 60.2963)
+
+[node name="treefinish" parent="treefinish/treefinish4" instance=ExtResource("1_3vgob")]
+transform = Transform3D(1.89576, 0, 0, 0, 1.89576, 0, 0, 0, 1.89576, -14.2497, -4.67161, 24.4483)
+
+[node name="treefinish2" parent="treefinish/treefinish4" instance=ExtResource("1_3vgob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8001, 0.139748, 10.637)
+
+[node name="treefinish" parent="treefinish/treefinish4/treefinish2" instance=ExtResource("1_3vgob")]
+transform = Transform3D(1.89576, 0, 0, 0, 0.867429, 0, 0, 0, 1.89576, -14.2497, -4.67161, 24.4483)
+
+[node name="treefinish3" parent="treefinish/treefinish4" instance=ExtResource("1_3vgob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.1229, 1.19209e-07, -0.183423)
+
+[node name="treefinish" parent="treefinish/treefinish4/treefinish3" instance=ExtResource("1_3vgob")]
+transform = Transform3D(1.89576, 0, 0, 0, 1.89576, 0, 0, 0, 1.89576, -14.2497, -4.67161, 24.4483)
+
+[node name="treefinish2" parent="treefinish/treefinish4/treefinish3" instance=ExtResource("1_3vgob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8001, 0.139748, 10.637)
+
+[node name="treefinish" parent="treefinish/treefinish4/treefinish3/treefinish2" instance=ExtResource("1_3vgob")]
+transform = Transform3D(1.89576, 0, 0, 0, 0.867429, 0, 0, 0, 1.89576, -14.2497, -4.67161, 24.4483)
