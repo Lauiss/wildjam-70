@@ -1,15 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://dfn2kdgq3kn84"]
+[gd_scene load_steps=10 format=3 uid="uid://dfn2kdgq3kn84"]
 
 [ext_resource type="Script" path="res://scripts/playground.cs" id="1_kgnng"]
 [ext_resource type="PackedScene" uid="uid://bqc6d3ss1aq1d" path="res://scenes/player.tscn" id="1_mlphr"]
 [ext_resource type="PackedScene" uid="uid://dqw54c6k3swt" path="res://scenes/pause_menu.tscn" id="2_2fsvr"]
 [ext_resource type="PackedScene" uid="uid://dpa4g6xyj6jlg" path="res://scenes/map-colonly.escn" id="4_umnax"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qkdly"]
-albedo_color = Color(0.392157, 1, 0.384314, 1)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aospd"]
-albedo_color = Color(0.687215, 0.687215, 0.687215, 1)
+albedo_color = Color(0.521141, 0.521141, 0.52114, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fbhh8"]
 albedo_color = Color(0, 0.176471, 1, 1)
@@ -26,12 +23,13 @@ background_mode = 2
 sky = SubResource("Sky_q5odc")
 tonemap_mode = 2
 glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.049
 
 [node name="Playground" type="Node3D"]
 script = ExtResource("1_kgnng")
 
 [node name="Ground" type="CSGBox3D" parent="."]
-material_override = SubResource("StandardMaterial3D_qkdly")
 use_collision = true
 size = Vector3(5000, 1, 5000)
 material = SubResource("StandardMaterial3D_aospd")
