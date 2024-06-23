@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://mrliintxpa5e"]
+[gd_scene load_steps=5 format=3 uid="uid://mrliintxpa5e"]
 
 [ext_resource type="Theme" uid="uid://c1smofwrfjxpt" path="res://UI/default_UI.tres" id="1_71inf"]
 [ext_resource type="FontFile" uid="uid://b7osbfk2po1xx" path="res://Fonts/ChardinDoihle-8Mpwn.ttf" id="2_s7w1x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0ibw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e5lhn"]
 bg_color = Color(0.882353, 0.458824, 0.266667, 1)
@@ -42,7 +44,7 @@ pivot_offset = Vector2(223, 234)
 [node name="Panel" type="Panel" parent="settingsScreen"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("1_71inf")
+theme_override_styles/panel = SubResource("StyleBoxFlat_d0ibw")
 
 [node name="default" type="VBoxContainer" parent="settingsScreen"]
 layout_mode = 2

@@ -8,19 +8,14 @@ func _physics_process(delta):
 		GlobalVariables.IS_WIN = true
 		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 
-
 func star1(body):
 	score += 1 
-	if score >= 10:
-		win()
 	label.text = str(score) + "/10"
 	$star.queue_free()
 
 
 func star9(body):
 	score += 1
-	if score >= 10:
-		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	label.text = str(score) + "/10"
 	$star9.queue_free()
 
