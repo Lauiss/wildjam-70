@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://bqc6d3ss1aq1d"]
+[gd_scene load_steps=10 format=3 uid="uid://bqc6d3ss1aq1d"]
 
 [ext_resource type="Script" path="res://scripts/player.cs" id="1_1c7mt"]
 [ext_resource type="AudioStream" uid="uid://d3n1ac6ctisx0" path="res://SFX/walk.mp3" id="3_xcfaf"]
-[ext_resource type="PackedScene" uid="uid://dl82ckbf45i8w" path="res://scenes/ennemy.tscn" id="4_bpeqx"]
 [ext_resource type="AudioStream" uid="uid://cngl0iaoa3d04" path="res://SFX/jump.mp3" id="4_qqa4i"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4yh1l"]
@@ -11,8 +10,7 @@
 emission_shape = 3
 emission_box_extents = Vector3(50, 50, 50)
 angle_min = -76.5
-angle_max = -76.5
-direction = Vector3(1, -1, 0)
+direction = Vector3(0.2, -1, 0)
 spread = 5.0
 initial_velocity_min = 10.0
 initial_velocity_max = 237.07
@@ -31,6 +29,7 @@ use_particle_trails = true
 
 [sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_wgtjk"]
 material = SubResource("StandardMaterial3D_xyhs6")
+size = 2.0
 curve = SubResource("Curve_rh0y4")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_aoi7c"]
@@ -70,5 +69,3 @@ stream = ExtResource("3_xcfaf")
 
 [node name="jump" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_qqa4i")
-
-[node name="Ennemy" parent="." instance=ExtResource("4_bpeqx")]
