@@ -41,7 +41,7 @@ func _on_volume_pressed():
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://scenes/character_selection.tscn")
+	get_tree().change_scene_to_file("res://scenes/cinematic.tscn")
 
 func _on_exit_pressed():
 	get_tree().quit()
