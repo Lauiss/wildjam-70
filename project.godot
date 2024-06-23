@@ -10,13 +10,13 @@ config_version=5
 
 [application]
 
-config/name="wildjam-70"
+config/name="Dawnfire"
 run/main_scene="res://scenes/title_menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 boot_splash/bg_color=Color(0.12549, 0.101961, 0.25098, 1)
 boot_splash/image="res://UI/logo.png"
 boot_splash/fullsize=false
-config/icon="res://icon.svg"
+config/icon="res://images/dawnfire_logo.png"
 
 [autoload]
 
