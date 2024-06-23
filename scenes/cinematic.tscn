@@ -39,6 +39,6 @@ offset_left = 944.0
 offset_top = 603.0
 offset_right = 1094.0
 offset_bottom = 626.0
-text = "Press SPACE to skip"
+text = "SPACE_SKIP"
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

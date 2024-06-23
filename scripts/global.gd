@@ -1,4 +1,4 @@
 extends Node
 
-var language = "english"
+var language = "en"
 var voice = "french"

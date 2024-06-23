@@ -47,7 +47,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_6r48y")
 theme_override_font_sizes/font_size = 72
-text = "Game Over"
+text = "GAME_OVER"
 horizontal_alignment = 1
 
 [node name="You_died" type="Label" parent="."]
@@ -66,7 +66,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_6r48y")
 theme_override_font_sizes/font_size = 72
-text = "You died"
+text = "YOU_DIED"
 horizontal_alignment = 1
 
 [node name="You_won" type="Label" parent="."]
@@ -106,7 +106,7 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_tf8bs")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_kk3mb")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_w5q4c")
-text = "Play Again"
+text = "PLAY_AGAIN"
 
 [node name="HSeparator" type="HSeparator" parent="HBoxContainer"]
 modulate = Color(1, 1, 1, 0)
@@ -124,7 +124,7 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_tf8bs")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_kk3mb")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_w5q4c")
-text = "Exit
+text = "EXIT
 "
 
 [connection signal="pressed" from="HBoxContainer/play_again" to="." method="PlayAgain"]

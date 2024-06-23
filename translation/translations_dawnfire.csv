@@ -1,0 +1,26 @@
+key,en,fr
+START,Start,Jouer
+HOW_TO_PLAY,How to play,Comment jouer
+SETTINGS,Settings,Options
+EXIT,Exit,Quitter
+TO_MOVE,To move:,Pour bouger:
+TO_RUN,To run:,Pour courrir:
+TO_JUMP,To jump:,Pour sauter:
+SEARCH_STARS,Search for broken stars to stop the curse,Cherche les étoiles cassées pour arrêter la malédiction
+AVOID_FIREFLY,Don't get caught by the firefly,Ne te fais pas toucher par les feux follets
+BACK,Back,Retour
+LANGUAGE,Language,Langue
+VOLUME,Volume,Volume
+MAIN,Main:,Principal:
+SFX,SFX:,SFX:
+MUSIC,Music:,Musique:
+VOICE,Voice:,Voix:
+SELECT_CHARACTER,Select character,Choisis un personnage
+DOCTOR,The doctor,La docteur
+CHILD,The child,L'enfant
+GAME_OVER,Game over,Partie terminée
+PLAY_AGAIN,Play again,Rejouer
+EXIT,Exit,Quitter
+YOU_DIED,You died,Tu es mort
+YOU_WON,You won,Tu as gagné
+SPACE_SKIP,Press SPACE to skip,Appuie sur ESPACE pour passer

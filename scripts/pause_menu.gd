@@ -86,12 +86,12 @@ func _on_language_pressed():
 func _on_fr_pressed():
 	voices.text = "voice : French"
 	click.play()
-	Global.voice = "french"
+	Global.voice = "fr"
 
 
 func _on_en_pressed():
 	voices.text = "voice : English"
-	Global.voice = "english"
+	Global.voice = "en"
 	click.play()
 
 
@@ -103,13 +103,17 @@ func _on_none_pressed():
 
 func _on_en_text_pressed():
 	texts.text = "text : English"
-	Global.language = "english"
+	Global.language = "en"
+	TranslationServer.set_locale("en")
+	TranslationServer.reload_pseudolocalization()
 	click.play()
 
 
 func _on_fr_text_pressed():
+	TranslationServer.set_locale("fr")
+	TranslationServer.reload_pseudolocalization()
 	texts.text = "text : French"
-	Global.language = "french"
+	Global.language = "fr"
 	click.play()
 
 

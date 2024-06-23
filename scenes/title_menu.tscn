@@ -157,7 +157,7 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_cvrps")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_3xmw8")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_odq35")
-text = "Start"
+text = "START"
 
 [node name="HSeparator_start5" type="HSeparator" parent="pauseScreen/pauseContainer"]
 modulate = Color(1, 1, 1, 0)
@@ -177,7 +177,7 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_cvrps")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_3xmw8")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_odq35")
-text = "How to play"
+text = "HOW_TO_PLAY"
 
 [node name="HSeparator_start3" type="HSeparator" parent="pauseScreen/pauseContainer"]
 modulate = Color(1, 1, 1, 0)
@@ -196,7 +196,7 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_dugeg")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ey8ao")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_vb3a6")
-text = "Settings"
+text = "SETTINGS"
 
 [node name="HSeparator_start4" type="HSeparator" parent="pauseScreen/pauseContainer"]
 modulate = Color(1, 1, 1, 0)
@@ -215,7 +215,7 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_35m26")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ny6rl")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_rv2in")
-text = "Exit"
+text = "EXIT"
 
 [node name="HSeparator_start2" type="HSeparator" parent="pauseScreen/pauseContainer"]
 modulate = Color(1, 1, 1, 0)
@@ -255,7 +255,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("7_b4cnv")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_6v5r8")
-text = "Settings"
+text = "SETTINGS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -270,7 +270,7 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_auaub")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_mfe81")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_cest3")
-text = "Language"
+text = "LANGUAGE"
 
 [node name="Volume" type="Button" parent="settingsScreen/default"]
 layout_mode = 2
@@ -283,7 +283,7 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_awu65")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_x443i")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_v2k2v")
-text = "Volume"
+text = "VOLUME"
 
 [node name="Back" type="Button" parent="settingsScreen/default"]
 layout_mode = 2
@@ -296,7 +296,7 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ebget")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_nxcqq")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_cm11f")
-text = "Back"
+text = "BACK"
 
 [node name="VSeparator2" type="VSeparator" parent="settingsScreen/default"]
 modulate = Color(1, 1, 1, 0)
@@ -334,7 +334,7 @@ size_flags_stretch_ratio = 0.04
 layout_mode = 2
 theme = ExtResource("2_7qmhy")
 theme_override_font_sizes/font_size = 32
-text = "Main : "
+text = "MAIN"
 
 [node name="HSeparator_start" type="HSeparator" parent="settingsScreen/volume/HBoxContainer"]
 modulate = Color(1, 1, 1, 0)
@@ -373,7 +373,7 @@ size_flags_stretch_ratio = 0.04
 layout_mode = 2
 theme = ExtResource("2_7qmhy")
 theme_override_font_sizes/font_size = 32
-text = "SFX : "
+text = "SFX"
 
 [node name="HSeparator_start" type="HSeparator" parent="settingsScreen/volume/HBoxContainer2"]
 modulate = Color(1, 1, 1, 0)
@@ -412,7 +412,7 @@ size_flags_stretch_ratio = 0.04
 layout_mode = 2
 theme = ExtResource("2_7qmhy")
 theme_override_font_sizes/font_size = 32
-text = "Music :"
+text = "MUSIC"
 
 [node name="HSeparator_start" type="HSeparator" parent="settingsScreen/volume/HBoxContainer3"]
 modulate = Color(1, 1, 1, 0)
@@ -451,7 +451,7 @@ size_flags_stretch_ratio = 0.04
 layout_mode = 2
 theme = ExtResource("2_7qmhy")
 theme_override_font_sizes/font_size = 32
-text = "Voice :"
+text = "VOICE"
 
 [node name="HSeparator_start" type="HSeparator" parent="settingsScreen/volume/HBoxContainer4"]
 modulate = Color(1, 1, 1, 0)
@@ -495,7 +495,7 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_gserg")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_dlu63")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_a1k1i")
-text = "Back to Menu"
+text = "BACK"
 
 [node name="VSeparator" type="VSeparator" parent="settingsScreen/volume"]
 modulate = Color(1, 1, 1, 0)
@@ -514,7 +514,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("7_b4cnv")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_6v5r8")
-text = "Language"
+text = "LANGUAGE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -682,7 +682,7 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_jlu8b")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_nxpcd")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_3tufo")
-text = "Back to Menu"
+text = "BACK"
 
 [node name="SFXPreview" type="AudioStreamPlayer" parent="settingsScreen"]
 stream = ExtResource("6_i2wqo")
@@ -724,72 +724,72 @@ size_flags_vertical = 0
 
 [node name="ToMove" type="Label" parent="HowToPlay"]
 layout_mode = 2
-offset_left = 104.0
-offset_top = 104.0
-offset_right = 210.0
-offset_bottom = 148.0
+offset_left = 181.035
+offset_top = 62.0349
+offset_right = 287.035
+offset_bottom = 106.035
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("7_b4cnv")
 theme_override_font_sizes/font_size = 36
-text = "To move :"
+text = "TO_MOVE"
 
 [node name="ToRun" type="Label" parent="HowToPlay"]
-offset_left = 343.0
-offset_top = 105.0
-offset_right = 449.0
-offset_bottom = 149.0
+offset_left = 801.587
+offset_top = 62.3489
+offset_right = 907.587
+offset_bottom = 106.349
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("7_b4cnv")
 theme_override_font_sizes/font_size = 36
-text = "To run :"
+text = "TO_RUN"
 
 [node name="ToJump" type="Label" parent="HowToPlay"]
-offset_left = 337.0
-offset_top = 271.0
-offset_right = 443.0
-offset_bottom = 315.0
+offset_left = 795.587
+offset_top = 228.349
+offset_right = 901.587
+offset_bottom = 272.349
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("7_b4cnv")
 theme_override_font_sizes/font_size = 36
-text = "To jump :"
+text = "TO_JUMP"
 
 [node name="WhatToDo" type="Label" parent="HowToPlay"]
-offset_left = 588.0
-offset_top = 98.0
-offset_right = 1099.0
-offset_bottom = 142.0
+offset_left = 209.0
+offset_top = 466.0
+offset_right = 720.0
+offset_bottom = 510.0
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("7_b4cnv")
 theme_override_font_sizes/font_size = 36
-text = "Search for broken stars to stop the curse"
+text = "SEARCH_STARS"
 
 [node name="WhatToDo2" type="Label" parent="HowToPlay"]
-offset_left = 588.0
-offset_top = 270.0
-offset_right = 1099.0
-offset_bottom = 314.0
+offset_left = 204.0
+offset_top = 405.0
+offset_right = 715.0
+offset_bottom = 449.0
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("7_b4cnv")
 theme_override_font_sizes/font_size = 36
-text = "Don't get caught by the firefly"
+text = "AVOID_FIREFLY"
 
 [node name="Shift" type="Sprite2D" parent="HowToPlay"]
-position = Vector2(424, 187)
+position = Vector2(882.587, 144.349)
 scale = Vector2(0.608372, 0.608372)
 texture = ExtResource("8_r6c7b")
 
 [node name="Jump" type="Sprite2D" parent="HowToPlay"]
-position = Vector2(418, 351)
+position = Vector2(876.587, 308.349)
 scale = Vector2(0.636468, 0.636468)
 texture = ExtResource("9_r5loh")
 
 [node name="ZQSD" type="Sprite2D" parent="HowToPlay"]
-position = Vector2(197, 233)
+position = Vector2(274.035, 191.035)
 scale = Vector2(0.532587, 0.532587)
 texture = ExtResource("10_v2bpi")
 
 [node name="WASD" type="Sprite2D" parent="HowToPlay"]
-position = Vector2(196, 350)
+position = Vector2(273.035, 308.035)
 scale = Vector2(0.532587, 0.532587)
 texture = ExtResource("11_5527b")
 
@@ -810,7 +810,7 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ebget")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_nxcqq")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_cm11f")
-text = "Back"
+text = "BACK"
 
 [node name="ButtonClick" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_i2wqo")
