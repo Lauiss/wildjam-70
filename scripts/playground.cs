@@ -15,3 +15,4 @@ public partial class playground : Node3D
 		GD.Print(CharacterParams);
 	}
 }
+
