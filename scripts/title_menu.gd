@@ -12,6 +12,9 @@ var pause_menu
 @onready var texts = $settingsScreen/Language/Texts
 @onready var voices = $settingsScreen/Language/Voices
 
+func _ready():
+	TranslationServer.set_locale("en");
+
 
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
@@ -81,14 +84,16 @@ func _on_none_pressed():
 
 
 func _on_en_text_pressed():
+	TranslationServer.set_locale("en");
 	texts.text = "text : English"
-	Global.language = "english"
+	Global.language = "en"
 	click.play()
 
 
 func _on_fr_text_pressed():
+	TranslationServer.set_locale("fr");
 	texts.text = "text : French"
-	Global.language = "french"
+	Global.language = "fr"
 	click.play()
 
 

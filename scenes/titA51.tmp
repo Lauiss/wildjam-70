@@ -1,0 +1,860 @@
+[gd_scene load_steps=46 format=3 uid="uid://cnxfnw4ffj33s"]
+
+[ext_resource type="Script" path="res://scripts/title_menu.gd" id="1_gnegl"]
+[ext_resource type="Theme" uid="uid://c1smofwrfjxpt" path="res://UI/default_UI.tres" id="2_7qmhy"]
+[ext_resource type="Texture2D" uid="uid://b4nucam3th5q0" path="res://images/dawnfire_logo.png" id="2_lrcao"]
+[ext_resource type="AudioStream" uid="uid://ofhlh3wruqrr" path="res://SFX/volume.mp3" id="6_i2wqo"]
+[ext_resource type="FontFile" uid="uid://bntwy8qh4wgb0" path="res://Fonts/BebasNeue-Regular.ttf" id="7_b4cnv"]
+[ext_resource type="Texture2D" uid="uid://bl62en76gobmi" path="res://UI/fr.png" id="8_8rva4"]
+[ext_resource type="Texture2D" uid="uid://vuu3u8e27dy7" path="res://images/Shift.png" id="8_r6c7b"]
+[ext_resource type="AudioStream" uid="uid://dm4ci7vgwvspb" path="res://SFX/music_menu.mp3" id="9_1lidc"]
+[ext_resource type="Texture2D" uid="uid://brguj68y2sctg" path="res://UI/gb.png" id="9_p6hh2"]
+[ext_resource type="Texture2D" uid="uid://dhxx5krmftip3" path="res://images/Space.png" id="9_r5loh"]
+[ext_resource type="Texture2D" uid="uid://2nyukd1yj653" path="res://images/ZQSD.png" id="10_v2bpi"]
+[ext_resource type="Texture2D" uid="uid://c07agga8r0sa0" path="res://images/WASD.png" id="11_5527b"]
+
+[sub_resource type="Theme" id="Theme_fyeg3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cvrps"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3xmw8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_odq35"]
+
+[sub_resource type="Theme" id="Theme_11ana"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dugeg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ey8ao"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vb3a6"]
+
+[sub_resource type="Theme" id="Theme_d2g8t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_35m26"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ny6rl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rv2in"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpm0h"]
+bg_color = Color(0.12549, 0.101961, 0.25098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6v5r8"]
+bg_color = Color(0.109804, 0.0980392, 0.160784, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.12549, 0.101961, 0.25098, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_auaub"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mfe81"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cest3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_awu65"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x443i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v2k2v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ebget"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nxcqq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cm11f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gserg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dlu63"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a1k1i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jq7l"]
+bg_color = Color(0, 0, 0, 0.392157)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_usub4"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 0.141176)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kwesl"]
+size = Vector2(60, 45)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jlu8b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nxpcd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3tufo"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_jyvab"]
+script/source = "using Godot;
+using System;
+
+public partial class ButtonClick : AudioStreamPlayer
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
+
+[node name="title_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gnegl")
+
+[node name="Background_ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12549, 0.101961, 0.25098, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(570, 267)
+texture = ExtResource("2_lrcao")
+
+[node name="pauseScreen" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -326.0
+offset_right = 22.0
+offset_bottom = -217.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(223, 234)
+
+[node name="pauseContainer" type="HBoxContainer" parent="pauseScreen"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="HSeparator_start" type="HSeparator" parent="pauseScreen/pauseContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[node name="play" type="Button" parent="pauseScreen/pauseContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_fyeg3")
+theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cvrps")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3xmw8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_odq35")
+text = "START"
+
+[node name="HSeparator_start5" type="HSeparator" parent="pauseScreen/pauseContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="how_to_play" type="Button" parent="pauseScreen/pauseContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_fyeg3")
+theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cvrps")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3xmw8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_odq35")
+text = "HOW_TO_PLAY"
+
+[node name="HSeparator_start3" type="HSeparator" parent="pauseScreen/pauseContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="settings" type="Button" parent="pauseScreen/pauseContainer"]
+layout_mode = 2
+theme = SubResource("Theme_11ana")
+theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dugeg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ey8ao")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vb3a6")
+text = "SETTINGS"
+
+[node name="HSeparator_start4" type="HSeparator" parent="pauseScreen/pauseContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="exit" type="Button" parent="pauseScreen/pauseContainer"]
+layout_mode = 2
+theme = SubResource("Theme_d2g8t")
+theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_35m26")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ny6rl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rv2in")
+text = "EXIT"
+
+[node name="HSeparator_start2" type="HSeparator" parent="pauseScreen/pauseContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="settingsScreen" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -254.5
+offset_top = -263.0
+offset_right = 254.5
+offset_bottom = 263.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(223, 234)
+
+[node name="Panel" type="Panel" parent="settingsScreen"]
+texture_filter = 1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jpm0h")
+
+[node name="default" type="VBoxContainer" parent="settingsScreen"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 20
+
+[node name="screenTitle" type="Label" parent="settingsScreen/default"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_6v5r8")
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Language" type="Button" parent="settingsScreen/default"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_auaub")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mfe81")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cest3")
+text = "LANGUAGE"
+
+[node name="Volume" type="Button" parent="settingsScreen/default"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_awu65")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x443i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_v2k2v")
+text = "VOLUME"
+
+[node name="Back" type="Button" parent="settingsScreen/default"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ebget")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nxcqq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cm11f")
+text = "BACK"
+
+[node name="VSeparator2" type="VSeparator" parent="settingsScreen/default"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="volume" type="VBoxContainer" parent="settingsScreen"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="settingsScreen/volume"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_6v5r8")
+text = "Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settingsScreen/volume"]
+layout_mode = 2
+
+[node name="HSeparator_start3" type="HSeparator" parent="settingsScreen/volume/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.04
+
+[node name="MasterLabel" type="Label" parent="settingsScreen/volume/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_7qmhy")
+theme_override_font_sizes/font_size = 32
+text = "MAIN"
+
+[node name="HSeparator_start" type="HSeparator" parent="settingsScreen/volume/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.04
+
+[node name="Master" type="HSlider" parent="settingsScreen/volume/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource("2_7qmhy")
+min_value = -15.0
+max_value = 0.0
+step = 0.5
+
+[node name="HSeparator_start2" type="HSeparator" parent="settingsScreen/volume/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.04
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="settingsScreen/volume"]
+layout_mode = 2
+
+[node name="HSeparator_start3" type="HSeparator" parent="settingsScreen/volume/HBoxContainer2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.04
+
+[node name="SFXLabel" type="Label" parent="settingsScreen/volume/HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("2_7qmhy")
+theme_override_font_sizes/font_size = 32
+text = "SFX"
+
+[node name="HSeparator_start" type="HSeparator" parent="settingsScreen/volume/HBoxContainer2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.07
+
+[node name="SFX" type="HSlider" parent="settingsScreen/volume/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource("2_7qmhy")
+min_value = -15.0
+max_value = 0.0
+step = 0.5
+
+[node name="HSeparator_start2" type="HSeparator" parent="settingsScreen/volume/HBoxContainer2"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.04
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="settingsScreen/volume"]
+layout_mode = 2
+
+[node name="HSeparator_start3" type="HSeparator" parent="settingsScreen/volume/HBoxContainer3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.04
+
+[node name="MusicLabel" type="Label" parent="settingsScreen/volume/HBoxContainer3"]
+layout_mode = 2
+theme = ExtResource("2_7qmhy")
+theme_override_font_sizes/font_size = 32
+text = "MUSIC"
+
+[node name="HSeparator_start" type="HSeparator" parent="settingsScreen/volume/HBoxContainer3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.02
+
+[node name="Music" type="HSlider" parent="settingsScreen/volume/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource("2_7qmhy")
+min_value = -15.0
+max_value = 0.0
+step = 0.5
+
+[node name="HSeparator_start2" type="HSeparator" parent="settingsScreen/volume/HBoxContainer3"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.04
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="settingsScreen/volume"]
+layout_mode = 2
+
+[node name="HSeparator_start3" type="HSeparator" parent="settingsScreen/volume/HBoxContainer4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.04
+
+[node name="VoiceLabel" type="Label" parent="settingsScreen/volume/HBoxContainer4"]
+layout_mode = 2
+theme = ExtResource("2_7qmhy")
+theme_override_font_sizes/font_size = 32
+text = "VOICE"
+
+[node name="HSeparator_start" type="HSeparator" parent="settingsScreen/volume/HBoxContainer4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.04
+
+[node name="Voice" type="HSlider" parent="settingsScreen/volume/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource("2_7qmhy")
+min_value = -15.0
+max_value = 0.0
+step = 0.5
+
+[node name="HSeparator_start2" type="HSeparator" parent="settingsScreen/volume/HBoxContainer4"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.04
+
+[node name="VSeparator3" type="VSeparator" parent="settingsScreen/volume"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Back" type="Button" parent="settingsScreen/volume"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gserg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dlu63")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a1k1i")
+text = "BACK"
+
+[node name="VSeparator" type="VSeparator" parent="settingsScreen/volume"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Language" type="VBoxContainer" parent="settingsScreen"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 20
+
+[node name="Language" type="Label" parent="settingsScreen/Language"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_6v5r8")
+text = "LANGUAGE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Voices" type="Label" parent="settingsScreen/Language"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_8jq7l")
+text = "Voice : French"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settingsScreen/Language"]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="settingsScreen/Language/HBoxContainer"]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="settingsScreen/Language/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="fr" type="Button" parent="settingsScreen/Language/HBoxContainer/VBoxContainer/AspectRatioContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_usub4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_usub4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_usub4")
+icon = ExtResource("8_8rva4")
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="settingsScreen/Language/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="settingsScreen/Language/HBoxContainer/VBoxContainer/AspectRatioContainer2"]
+layout_mode = 2
+theme = ExtResource("2_7qmhy")
+theme_override_font_sizes/font_size = 25
+text = "Baguette🥖"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="settingsScreen/Language/HBoxContainer"]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="settingsScreen/Language/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="en" type="Button" parent="settingsScreen/Language/HBoxContainer/VBoxContainer2/AspectRatioContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_usub4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_usub4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_usub4")
+icon = ExtResource("9_p6hh2")
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="settingsScreen/Language/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="settingsScreen/Language/HBoxContainer/VBoxContainer2/AspectRatioContainer2"]
+layout_mode = 2
+theme = ExtResource("2_7qmhy")
+theme_override_font_sizes/font_size = 25
+text = "Rosbeef🍖"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="settingsScreen/Language/HBoxContainer"]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="settingsScreen/Language/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+
+[node name="none" type="Button" parent="settingsScreen/Language/HBoxContainer/VBoxContainer3/AspectRatioContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_usub4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_usub4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_usub4")
+icon = SubResource("PlaceholderTexture2D_kwesl")
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="settingsScreen/Language/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="settingsScreen/Language/HBoxContainer/VBoxContainer3/AspectRatioContainer2"]
+layout_mode = 2
+theme = ExtResource("2_7qmhy")
+theme_override_font_sizes/font_size = 25
+text = "    None🤫    "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Texts" type="Label" parent="settingsScreen/Language"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_8jq7l")
+text = "text : English"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="settingsScreen/Language"]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="settingsScreen/Language/HBoxContainer2"]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="settingsScreen/Language/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="fr_text" type="Button" parent="settingsScreen/Language/HBoxContainer2/VBoxContainer/AspectRatioContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_usub4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_usub4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_usub4")
+icon = ExtResource("8_8rva4")
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="settingsScreen/Language/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="settingsScreen/Language/HBoxContainer2/VBoxContainer/AspectRatioContainer2"]
+layout_mode = 2
+theme = ExtResource("2_7qmhy")
+theme_override_font_sizes/font_size = 25
+text = "Baguette🥖"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="settingsScreen/Language/HBoxContainer2"]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="settingsScreen/Language/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+
+[node name="en_text" type="Button" parent="settingsScreen/Language/HBoxContainer2/VBoxContainer2/AspectRatioContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_usub4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_usub4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_usub4")
+icon = ExtResource("9_p6hh2")
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="settingsScreen/Language/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="settingsScreen/Language/HBoxContainer2/VBoxContainer2/AspectRatioContainer2"]
+layout_mode = 2
+theme = ExtResource("2_7qmhy")
+theme_override_font_sizes/font_size = 25
+text = "Rosbeef🍖"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="settingsScreen/Language"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jlu8b")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nxpcd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3tufo")
+text = "BACK"
+
+[node name="SFXPreview" type="AudioStreamPlayer" parent="settingsScreen"]
+stream = ExtResource("6_i2wqo")
+bus = &"SFX"
+
+[node name="MasterPreview" type="AudioStreamPlayer" parent="settingsScreen"]
+stream = ExtResource("6_i2wqo")
+
+[node name="MusicPreview" type="AudioStreamPlayer" parent="settingsScreen"]
+stream = ExtResource("6_i2wqo")
+bus = &"Music"
+
+[node name="VoicePreview" type="AudioStreamPlayer" parent="settingsScreen"]
+stream = ExtResource("6_i2wqo")
+bus = &"Voice"
+
+[node name="HowToPlay" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchor_left = 0.00173611
+anchor_right = 1.00174
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(223, 234)
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="HowToPlay"]
+texture_filter = 1
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jpm0h")
+
+[node name="MarginContainer" type="MarginContainer" parent="HowToPlay"]
+layout_mode = 2
+offset_right = 1152.0
+size_flags_vertical = 0
+
+[node name="ToMove" type="Label" parent="HowToPlay"]
+layout_mode = 2
+offset_left = 181.035
+offset_top = 62.0349
+offset_right = 287.035
+offset_bottom = 106.035
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+text = "TO_MOVE"
+
+[node name="ToRun" type="Label" parent="HowToPlay"]
+offset_left = 801.587
+offset_top = 62.3489
+offset_right = 907.587
+offset_bottom = 106.349
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+text = "TO_RUN"
+
+[node name="ToJump" type="Label" parent="HowToPlay"]
+offset_left = 795.587
+offset_top = 228.349
+offset_right = 901.587
+offset_bottom = 272.349
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+text = "TO_JUMP"
+
+[node name="WhatToDo" type="Label" parent="HowToPlay"]
+offset_left = 209.0
+offset_top = 466.0
+offset_right = 720.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+text = "SEARCH_STARS"
+
+[node name="WhatToDo2" type="Label" parent="HowToPlay"]
+offset_left = 204.0
+offset_top = 405.0
+offset_right = 715.0
+offset_bottom = 449.0
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+text = "AVOID_FIREFLY"
+
+[node name="Shift" type="Sprite2D" parent="HowToPlay"]
+position = Vector2(882.587, 144.349)
+scale = Vector2(0.608372, 0.608372)
+texture = ExtResource("8_r6c7b")
+
+[node name="Jump" type="Sprite2D" parent="HowToPlay"]
+position = Vector2(876.587, 308.349)
+scale = Vector2(0.636468, 0.636468)
+texture = ExtResource("9_r5loh")
+
+[node name="ZQSD" type="Sprite2D" parent="HowToPlay"]
+position = Vector2(274.035, 191.035)
+scale = Vector2(0.532587, 0.532587)
+texture = ExtResource("10_v2bpi")
+
+[node name="WASD" type="Sprite2D" parent="HowToPlay"]
+position = Vector2(273.035, 308.035)
+scale = Vector2(0.532587, 0.532587)
+texture = ExtResource("11_5527b")
+
+[node name="Back" type="Button" parent="HowToPlay"]
+layout_mode = 2
+offset_left = 531.0
+offset_top = 550.0
+offset_right = 589.0
+offset_bottom = 594.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ebget")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nxcqq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cm11f")
+text = "BACK"
+
+[node name="ButtonClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_i2wqo")
+script = SubResource("CSharpScript_jyvab")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_1lidc")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="pauseScreen/pauseContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="pauseScreen/pauseContainer/how_to_play" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="pauseScreen/pauseContainer/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="pauseScreen/pauseContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="settingsScreen/default/Language" to="." method="_on_language_pressed"]
+[connection signal="pressed" from="settingsScreen/default/Volume" to="." method="_on_volume_pressed"]
+[connection signal="pressed" from="settingsScreen/default/Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer/Master" to="." method="_on_master_value_changed"]
+[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer2/SFX" to="." method="_on_sfx_value_changed"]
+[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer3/Music" to="." method="_on_music_value_changed"]
+[connection signal="value_changed" from="settingsScreen/volume/HBoxContainer4/Voice" to="." method="_on_voice_value_changed"]
+[connection signal="pressed" from="settingsScreen/volume/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="settingsScreen/Language/HBoxContainer/VBoxContainer/AspectRatioContainer/fr" to="." method="_on_fr_pressed"]
+[connection signal="pressed" from="settingsScreen/Language/HBoxContainer/VBoxContainer2/AspectRatioContainer/en" to="." method="_on_en_pressed"]
+[connection signal="pressed" from="settingsScreen/Language/HBoxContainer/VBoxContainer3/AspectRatioContainer/none" to="." method="_on_none_pressed"]
+[connection signal="pressed" from="settingsScreen/Language/HBoxContainer2/VBoxContainer/AspectRatioContainer/fr_text" to="." method="_on_fr_text_pressed"]
+[connection signal="pressed" from="settingsScreen/Language/HBoxContainer2/VBoxContainer2/AspectRatioContainer/en_text" to="." method="_on_en_text_pressed"]
+[connection signal="pressed" from="settingsScreen/Language/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="HowToPlay/Back" to="." method="_on_back_pressed"]

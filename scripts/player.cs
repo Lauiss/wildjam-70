@@ -28,6 +28,7 @@ public partial class player : CharacterBody3D
 		_head = GetNode<Node3D>("Head");
 		_camera = GetNode<Camera3D>("Head/Camera");
 		_hand = GetNode<hand>("Hand");
+
 		_global = GetTree().Root.GetNode<global_variables>("GlobalVariables");
 		_collisionShape = GetNode<CollisionShape3D>("CollisionShape3D");
 		

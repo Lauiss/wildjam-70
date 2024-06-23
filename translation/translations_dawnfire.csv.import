@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://1vqjgsloa03f"
+
+[deps]
+
+files=["res://translation/translations_dawnfire.en.translation", "res://translation/translations_dawnfire.fr.translation"]
+
+source_file="res://translation/translations_dawnfire.csv"
+dest_files=["res://translation/translations_dawnfire.en.translation", "res://translation/translations_dawnfire.fr.translation"]
+
+[params]
+
+compress=true
+delimiter=0

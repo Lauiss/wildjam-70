@@ -94,7 +94,7 @@ size_flags_vertical = 0
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_6xg1o")
 theme_override_font_sizes/font_size = 40
-text = "Select Character"
+text = "SELECT_CHARACTER"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Main_container"]
@@ -112,7 +112,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_vertical = 4
 tooltip_text = "Manon,
-The doctor"
+DOCTOR"
 theme_override_styles/normal = SubResource("StyleBoxFlat_jfe0u")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ejqq3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_utflf")
@@ -141,7 +141,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_vertical = 4
 tooltip_text = "Beatrice,
-The child"
+CHILD"
 theme_override_styles/normal = SubResource("StyleBoxFlat_feygw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1y61e")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ll23m")
