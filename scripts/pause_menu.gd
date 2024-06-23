@@ -105,7 +105,6 @@ func _on_en_text_pressed():
 	texts.text = "text : English"
 	Global.language = "en"
 	TranslationServer.set_locale("en")
-	TranslationServer.reload_pseudolocalization()
 	click.play()
 
 
