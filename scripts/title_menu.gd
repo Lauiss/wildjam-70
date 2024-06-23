@@ -12,10 +12,6 @@ var pause_menu
 @onready var texts = $settingsScreen/Language/Texts
 @onready var voices = $settingsScreen/Language/Voices
 
-func _ready():
-	TranslationServer.set_locale("en");
-
-
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		if settings_screen.visible:

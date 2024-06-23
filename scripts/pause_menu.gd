@@ -104,15 +104,14 @@ func _on_none_pressed():
 
 
 func _on_en_text_pressed():
+	TranslationServer.set_locale("en")
 	texts.text = "text : English"
 	Global.language = "en"
-	TranslationServer.set_locale("en")
 	click.play()
 
 
 func _on_fr_text_pressed():
 	TranslationServer.set_locale("fr")
-	TranslationServer.reload_pseudolocalization()
 	texts.text = "text : French"
 	Global.language = "fr"
 	click.play()

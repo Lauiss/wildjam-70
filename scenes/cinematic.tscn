@@ -35,10 +35,10 @@ autoplay = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 944.0
-offset_top = 603.0
-offset_right = 1094.0
-offset_bottom = 626.0
+offset_left = 831.0
+offset_top = 598.0
+offset_right = 981.0
+offset_bottom = 621.0
 text = "SPACE_SKIP"
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
