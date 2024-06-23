@@ -742,10 +742,10 @@ size_flags_vertical = 0
 
 [node name="ToMove" type="Label" parent="HowToPlay"]
 layout_mode = 2
-offset_left = 181.035
-offset_top = 62.0349
-offset_right = 287.035
-offset_bottom = 106.035
+offset_left = 186.0
+offset_top = 121.0
+offset_right = 292.0
+offset_bottom = 165.0
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("7_b4cnv")
 theme_override_font_sizes/font_size = 36
@@ -802,12 +802,12 @@ scale = Vector2(0.636468, 0.636468)
 texture = ExtResource("9_r5loh")
 
 [node name="ZQSD" type="Sprite2D" parent="HowToPlay"]
-position = Vector2(274.035, 191.035)
+position = Vector2(314.035, 316.07)
 scale = Vector2(0.532587, 0.532587)
 texture = ExtResource("10_v2bpi")
 
 [node name="WASD" type="Sprite2D" parent="HowToPlay"]
-position = Vector2(273.035, 308.035)
+position = Vector2(516, 314.035)
 scale = Vector2(0.532587, 0.532587)
 texture = ExtResource("11_5527b")
 
