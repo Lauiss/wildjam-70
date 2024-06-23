@@ -1,80 +1,25 @@
-[gd_scene load_steps=37 format=3 uid="uid://dqw54c6k3swt"]
+[gd_scene load_steps=12 format=3 uid="uid://dqw54c6k3swt"]
 
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_npqiy"]
 [ext_resource type="Theme" uid="uid://c1smofwrfjxpt" path="res://UI/default_UI.tres" id="2_xy2g6"]
+[ext_resource type="FontFile" uid="uid://53vg4mdmgfxj" path="res://Fonts/Monoton-Regular.ttf" id="3_sycpf"]
 [ext_resource type="FontFile" uid="uid://bntwy8qh4wgb0" path="res://Fonts/BebasNeue-Regular.ttf" id="4_poywg"]
 [ext_resource type="Texture2D" uid="uid://bl62en76gobmi" path="res://UI/fr.png" id="5_huua5"]
 [ext_resource type="Texture2D" uid="uid://brguj68y2sctg" path="res://UI/gb.png" id="6_7x1yt"]
 [ext_resource type="AudioStream" uid="uid://ofhlh3wruqrr" path="res://SFX/volume.mp3" id="6_ffx4y"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04iw4"]
-bg_color = Color(0.12549, 0.101961, 0.25098, 0.643137)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ofvo4"]
-bg_color = Color(0.109804, 0.0980392, 0.160784, 1)
+bg_color = Color(0.882353, 0.458824, 0.266667, 1)
 border_width_left = 20
 border_width_top = 20
 border_width_right = 20
 border_width_bottom = 20
-border_color = Color(0.12549, 0.101961, 0.25098, 1)
+border_color = Color(0.8, 0.392157, 0.2, 1)
 border_blend = true
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jgbda"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_prt3d"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_61w0r"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t0g51"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1hsh2"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fqjnr"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ernua"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dv0ew"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wypgb"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qn01y"]
-bg_color = Color(0.12549, 0.101961, 0.25098, 0.643137)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dkyo8"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_82th7"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ojdrr"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ep6ik"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rfpvl"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_evf6o"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n61jt"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tdik0"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l2w61"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f6hk6"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b4u56"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qmag6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plory"]
 bg_color = Color(0, 0, 0, 0.392157)
@@ -89,14 +34,9 @@ bg_color = Color(0, 0, 0, 0.141176)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5o1m1"]
 size = Vector2(60, 45)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vple7"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8wk8k"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0iali"]
-
 [node name="Pause_menu" type="Control"]
 process_mode = 3
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -126,7 +66,7 @@ pivot_offset = Vector2(223, 234)
 [node name="Panel" type="Panel" parent="pauseScreen"]
 texture_filter = 1
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_04iw4")
+theme = ExtResource("2_xy2g6")
 
 [node name="pauseContainer" type="VBoxContainer" parent="pauseScreen"]
 layout_mode = 2
@@ -135,64 +75,31 @@ theme_override_constants/separation = 20
 
 [node name="screenTitle" type="Label" parent="pauseScreen/pauseContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_poywg")
+theme_override_fonts/font = ExtResource("3_sycpf")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_ofvo4")
 text = "Paused"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VSeparator2" type="VSeparator" parent="pauseScreen/pauseContainer"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(0, 40)
-layout_mode = 2
-size_flags_vertical = 0
-
 [node name="settings" type="Button" parent="pauseScreen/pauseContainer"]
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_fonts/font = ExtResource("4_poywg")
+theme = ExtResource("2_xy2g6")
 theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxEmpty_jgbda")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_prt3d")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_61w0r")
 text = "Settings"
 
 [node name="resume" type="Button" parent="pauseScreen/pauseContainer"]
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_fonts/font = ExtResource("4_poywg")
+theme = ExtResource("2_xy2g6")
 theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxEmpty_t0g51")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_1hsh2")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_fqjnr")
 text = "Resume
 "
 
 [node name="mainMenu" type="Button" parent="pauseScreen/pauseContainer"]
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_fonts/font = ExtResource("4_poywg")
+theme = ExtResource("2_xy2g6")
 theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ernua")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_dv0ew")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_wypgb")
 text = "Main menu"
-
-[node name="VSeparator" type="VSeparator" parent="pauseScreen/pauseContainer"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-size_flags_vertical = 0
 
 [node name="settingsScreen" type="MarginContainer" parent="."]
 visible = false
@@ -213,7 +120,7 @@ pivot_offset = Vector2(223, 234)
 [node name="Panel" type="Panel" parent="settingsScreen"]
 texture_filter = 1
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_qn01y")
+theme = ExtResource("2_xy2g6")
 
 [node name="default" type="VBoxContainer" parent="settingsScreen"]
 layout_mode = 2
@@ -222,63 +129,30 @@ theme_override_constants/separation = 20
 
 [node name="screenTitle" type="Label" parent="settingsScreen/default"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_poywg")
+theme_override_fonts/font = ExtResource("3_sycpf")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_ofvo4")
 text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VSeparator2" type="VSeparator" parent="settingsScreen/default"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-size_flags_vertical = 0
-
 [node name="Language" type="Button" parent="settingsScreen/default"]
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_fonts/font = ExtResource("4_poywg")
-theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxEmpty_dkyo8")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_82th7")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_ojdrr")
+theme = ExtResource("2_xy2g6")
+theme_override_font_sizes/font_size = 72
 text = "Language"
 
 [node name="Volume" type="Button" parent="settingsScreen/default"]
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_fonts/font = ExtResource("4_poywg")
-theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ep6ik")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_rfpvl")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_evf6o")
+theme = ExtResource("2_xy2g6")
+theme_override_font_sizes/font_size = 72
 text = "Volume"
 
 [node name="Back" type="Button" parent="settingsScreen/default"]
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_fonts/font = ExtResource("4_poywg")
+theme = ExtResource("2_xy2g6")
 theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxEmpty_n61jt")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_tdik0")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_l2w61")
 text = "Back"
-
-[node name="VSeparator" type="VSeparator" parent="settingsScreen/default"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-size_flags_vertical = 0
 
 [node name="volume" type="VBoxContainer" parent="settingsScreen"]
 visible = false
@@ -289,41 +163,21 @@ theme_override_constants/separation = 20
 [node name="Label" type="Label" parent="settingsScreen/volume"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_poywg")
+theme_override_fonts/font = ExtResource("3_sycpf")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_ofvo4")
 text = "Volume"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VSeparator2" type="VSeparator" parent="settingsScreen/volume"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-size_flags_vertical = 0
-
 [node name="HBoxContainer" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
-
-[node name="HSeparator_start3" type="HSeparator" parent="settingsScreen/volume/HBoxContainer"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(2, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.04
 
 [node name="MasterLabel" type="Label" parent="settingsScreen/volume/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_xy2g6")
 theme_override_font_sizes/font_size = 32
 text = "Main : "
-
-[node name="HSeparator_start" type="HSeparator" parent="settingsScreen/volume/HBoxContainer"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(2, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.04
 
 [node name="Master" type="HSlider" parent="settingsScreen/volume/HBoxContainer"]
 layout_mode = 2
@@ -334,35 +188,14 @@ min_value = -15.0
 max_value = 0.0
 step = 0.5
 
-[node name="HSeparator_start2" type="HSeparator" parent="settingsScreen/volume/HBoxContainer"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(2, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.04
-
 [node name="HBoxContainer2" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
-
-[node name="HSeparator_start3" type="HSeparator" parent="settingsScreen/volume/HBoxContainer2"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(2, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.04
 
 [node name="SFXLabel" type="Label" parent="settingsScreen/volume/HBoxContainer2"]
 layout_mode = 2
 theme = ExtResource("2_xy2g6")
 theme_override_font_sizes/font_size = 32
 text = "SFX : "
-
-[node name="HSeparator_start" type="HSeparator" parent="settingsScreen/volume/HBoxContainer2"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(2, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.07
 
 [node name="SFX" type="HSlider" parent="settingsScreen/volume/HBoxContainer2"]
 layout_mode = 2
@@ -373,35 +206,14 @@ min_value = -15.0
 max_value = 0.0
 step = 0.5
 
-[node name="HSeparator_start2" type="HSeparator" parent="settingsScreen/volume/HBoxContainer2"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(2, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.04
-
 [node name="HBoxContainer3" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
-
-[node name="HSeparator_start3" type="HSeparator" parent="settingsScreen/volume/HBoxContainer3"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(2, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.04
 
 [node name="MusicLabel" type="Label" parent="settingsScreen/volume/HBoxContainer3"]
 layout_mode = 2
 theme = ExtResource("2_xy2g6")
 theme_override_font_sizes/font_size = 32
 text = "Music :"
-
-[node name="HSeparator_start" type="HSeparator" parent="settingsScreen/volume/HBoxContainer3"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(2, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.02
 
 [node name="Music" type="HSlider" parent="settingsScreen/volume/HBoxContainer3"]
 layout_mode = 2
@@ -412,35 +224,14 @@ min_value = -15.0
 max_value = 0.0
 step = 0.5
 
-[node name="HSeparator_start2" type="HSeparator" parent="settingsScreen/volume/HBoxContainer3"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(2, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.04
-
 [node name="HBoxContainer4" type="HBoxContainer" parent="settingsScreen/volume"]
 layout_mode = 2
-
-[node name="HSeparator_start3" type="HSeparator" parent="settingsScreen/volume/HBoxContainer4"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(2, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.04
 
 [node name="VoiceLabel" type="Label" parent="settingsScreen/volume/HBoxContainer4"]
 layout_mode = 2
 theme = ExtResource("2_xy2g6")
 theme_override_font_sizes/font_size = 32
 text = "Voice :"
-
-[node name="HSeparator_start" type="HSeparator" parent="settingsScreen/volume/HBoxContainer4"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(2, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.04
 
 [node name="Voice" type="HSlider" parent="settingsScreen/volume/HBoxContainer4"]
 layout_mode = 2
@@ -451,38 +242,13 @@ min_value = -15.0
 max_value = 0.0
 step = 0.5
 
-[node name="HSeparator_start2" type="HSeparator" parent="settingsScreen/volume/HBoxContainer4"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(2, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.04
-
-[node name="VSeparator3" type="VSeparator" parent="settingsScreen/volume"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-size_flags_vertical = 0
-
 [node name="Back" type="Button" parent="settingsScreen/volume"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_fonts/font = ExtResource("4_poywg")
+theme = ExtResource("2_xy2g6")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxEmpty_f6hk6")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_b4u56")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_qmag6")
 text = "Back to Menu"
-
-[node name="VSeparator" type="VSeparator" parent="settingsScreen/volume"]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-size_flags_vertical = 0
 
 [node name="Language" type="VBoxContainer" parent="settingsScreen"]
 visible = false
@@ -493,18 +259,12 @@ theme_override_constants/separation = 20
 [node name="Language" type="Label" parent="settingsScreen/Language"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_poywg")
+theme_override_fonts/font = ExtResource("3_sycpf")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_ofvo4")
 text = "Language"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="VSeparator3" type="VSeparator" parent="settingsScreen/Language"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
-size_flags_vertical = 0
 
 [node name="Voices" type="Label" parent="settingsScreen/Language"]
 layout_mode = 2
@@ -657,31 +417,13 @@ text = "Rosbeef🍖"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VSeparator2" type="VSeparator" parent="settingsScreen/Language"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-size_flags_vertical = 0
-
 [node name="Back" type="Button" parent="settingsScreen/Language"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
-theme_override_fonts/font = ExtResource("4_poywg")
-theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxEmpty_vple7")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_8wk8k")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_0iali")
+theme = ExtResource("2_xy2g6")
+theme_override_font_sizes/font_size = 32
 text = "Back to Menu"
-
-[node name="VSeparator" type="VSeparator" parent="settingsScreen/Language"]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-size_flags_vertical = 0
 
 [node name="SFXPreview" type="AudioStreamPlayer" parent="settingsScreen"]
 stream = ExtResource("6_ffx4y")

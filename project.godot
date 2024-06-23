@@ -22,7 +22,6 @@ config/icon="res://icon.svg"
 
 Global="*res://scripts/global.gd"
 GlobalVariables="*res://scripts/global_variables.cs"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
@@ -36,10 +35,6 @@ window/stretch/mode="canvas_items"
 [dotnet]
 
 project/assembly_name="wildjam-70"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 [input]
 

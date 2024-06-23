@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://5i7b7mn02kp"]
+[gd_scene load_steps=9 format=3 uid="uid://coama173kjmhm"]
 
 [ext_resource type="Gradient" path="res://images/Fire.tres" id="1_rljy4"]
 [ext_resource type="Texture2D" uid="uid://c5emv5awslgab" path="res://images/Smoke30Frames_0.png" id="2_swv3y"]
