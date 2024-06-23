@@ -1,0 +1,131 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqmlg4cdn4oyr"]
+
+[ext_resource type="Script" path="res://scripts/game_over.cs" id="1_hs4qk"]
+[ext_resource type="Texture2D" uid="uid://b4nucam3th5q0" path="res://images/dawnfire_logo.png" id="1_mlhgp"]
+[ext_resource type="FontFile" uid="uid://bntwy8qh4wgb0" path="res://Fonts/BebasNeue-Regular.ttf" id="2_6r48y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tf8bs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kk3mb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w5q4c"]
+
+[node name="Game_over_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hs4qk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12549, 0.101961, 0.25098, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(563, 294)
+texture = ExtResource("1_mlhgp")
+
+[node name="Game_over" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -200.0
+offset_right = 115.0
+offset_bottom = -113.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_6r48y")
+theme_override_font_sizes/font_size = 72
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="You_died" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.0
+offset_top = 58.0
+offset_right = 105.0
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_6r48y")
+theme_override_font_sizes/font_size = 72
+text = "You died"
+horizontal_alignment = 1
+
+[node name="You_won" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.0
+offset_top = 58.0
+offset_right = 105.0
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_6r48y")
+theme_override_font_sizes/font_size = 72
+text = "You won "
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 508.0
+offset_right = 732.0
+offset_bottom = 552.0
+
+[node name="play_again" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_fonts/font = ExtResource("2_6r48y")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tf8bs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kk3mb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_w5q4c")
+text = "Play Again"
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="exit" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_fonts/font = ExtResource("2_6r48y")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tf8bs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kk3mb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_w5q4c")
+text = "Exit
+"
+
+[connection signal="pressed" from="HBoxContainer/play_again" to="." method="PlayAgain"]
+[connection signal="pressed" from="HBoxContainer/exit" to="." method="ExitGame"]

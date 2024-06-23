@@ -7,6 +7,7 @@ public partial class global_variables: Node
 	public float WALK_SPEED { get; set; }
 	public float SPRINT_SPEED { get; set; }
 	public float JUMP_VELOCITY { get; set; }
+	public bool IS_WIN { get; set; }
 	public Vector3 CHARACTER_SIZE { get; set; }
 
 	public override void _Ready()
