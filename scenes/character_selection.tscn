@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://6iuiamln07d0"]
+[gd_scene load_steps=12 format=3 uid="uid://6iuiamln07d0"]
 
 [ext_resource type="Script" path="res://scripts/character_selection.cs" id="1_8153i"]
+[ext_resource type="FontFile" uid="uid://bntwy8qh4wgb0" path="res://Fonts/BebasNeue-Regular.ttf" id="2_6xg1o"]
 [ext_resource type="Texture2D" uid="uid://dab2qj8irsij5" path="res://images/manon_icon.png" id="2_jjho6"]
 [ext_resource type="Texture2D" uid="uid://18o6wllpkkix" path="res://images/beatrice_icon.png" id="3_7xbok"]
 [ext_resource type="Texture2D" uid="uid://b4nucam3th5q0" path="res://images/dawnfire_logo.png" id="4_atxxm"]
@@ -91,6 +92,7 @@ size_flags_vertical = 0
 
 [node name="Title_label" type="Label" parent="Main_container"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6xg1o")
 theme_override_font_sizes/font_size = 40
 text = "Select Character"
 horizontal_alignment = 1
