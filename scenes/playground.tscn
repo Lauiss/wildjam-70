@@ -1,17 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://dfn2kdgq3kn84"]
+[gd_scene load_steps=11 format=3 uid="uid://dfn2kdgq3kn84"]
 
 [ext_resource type="Script" path="res://scripts/playground.cs" id="1_kgnng"]
 [ext_resource type="PackedScene" uid="uid://bqc6d3ss1aq1d" path="res://scenes/player.tscn" id="1_mlphr"]
 [ext_resource type="PackedScene" uid="uid://dqw54c6k3swt" path="res://scenes/pause_menu.tscn" id="2_2fsvr"]
+[ext_resource type="PackedScene" uid="uid://dpa4g6xyj6jlg" path="res://scenes/map-colonly.escn" id="4_umnax"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qkdly"]
 albedo_color = Color(0.392157, 1, 0.384314, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aospd"]
+albedo_color = Color(0.687215, 0.687215, 0.687215, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fbhh8"]
 albedo_color = Color(0, 0.176471, 1, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n2hwn"]
-albedo_color = Color(1, 0, 1, 1)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_env7u"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -32,7 +33,8 @@ script = ExtResource("1_kgnng")
 [node name="Ground" type="CSGBox3D" parent="."]
 material_override = SubResource("StandardMaterial3D_qkdly")
 use_collision = true
-size = Vector3(50, 1, 50)
+size = Vector3(5000, 1, 5000)
+material = SubResource("StandardMaterial3D_aospd")
 
 [node name="Little Box" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.34388, 1.00833, 0)
@@ -44,47 +46,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.35468, 5.55782, 17.3783)
 use_collision = true
 size = Vector3(10, 10, 10)
 
-[node name="Wall" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.48387, 2.00052, -9.91743)
-material_override = SubResource("StandardMaterial3D_n2hwn")
-use_collision = true
-size = Vector3(5, 3, 1)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_wuass")
-
-[node name="Jump_boxes" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.94191, 4.05832, 19.3553)
-use_collision = true
-size = Vector3(2, 7, 1)
-
-[node name="Jump box 2" type="CSGBox3D" parent="Jump_boxes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.94191, -1.19102, 1.17471)
-use_collision = true
-size = Vector3(2, 5, 1)
-
-[node name="Jump box 2" type="CSGBox3D" parent="Jump_boxes/Jump box 2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.427847, -0.399288, -2.60968)
-use_collision = true
-size = Vector3(2, 4, 1)
-
-[node name="Jump box 3" type="CSGBox3D" parent="Jump_boxes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.35184, -2.0721, -3.53859)
-use_collision = true
-size = Vector3(2, 3, 1)
-
-[node name="Jump box 4" type="CSGBox3D" parent="Jump_boxes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.70253, -2.46373, -6.67756)
-use_collision = true
-size = Vector3(2, 2, 1)
-
-[node name="Jump box 5" type="CSGBox3D" parent="Jump_boxes"]
-transform = Transform3D(0.999676, 0.025443, 0.000972086, -0.0254616, 0.998947, 0.0381662, 0, -0.0381785, 0.999271, -2.69531, -3.01167, -8.6571)
-use_collision = true
-size = Vector3(2, 1, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_mlphr")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Pause_menu" parent="CanvasLayer" instance=ExtResource("2_2fsvr")]
+
+[node name="Scene" parent="." instance=ExtResource("4_umnax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.4144, 0.5, -4.62481)
