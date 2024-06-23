@@ -37,6 +37,7 @@ points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607,
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.612486, 0)
+collision_layer = 513
 script = ExtResource("1_1c7mt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

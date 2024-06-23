@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cat8wfh7bfm8p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_44gda"]
+albedo_color = Color(2, 2, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2de4y"]
+
+[node name="Scene"]
+
+[node name="estrellica" parent="." index="0"]
+transform = Transform3D(-0.1, 1.50996e-08, 0, -1.50996e-08, -0.1, 0, 0, 0, 0.1, 0, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_44gda")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(-0.1, 1.50996e-08, 0, -1.50996e-08, -0.1, 0, 0, 0, 0.1, 0, 0, 0)
+shape = SubResource("BoxShape3D_2de4y")
+
+[node name="Area3D" type="Area3D" parent="CollisionShape3D" index="0"]
+transform = Transform3D(-10, -1.50996e-06, 0, 1.50996e-06, -10, 0, 0, 0, 10, 0, 0, 0)
