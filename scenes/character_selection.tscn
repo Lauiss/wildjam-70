@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://6iuiamln07d0"]
+[gd_scene load_steps=4 format=3 uid="uid://6iuiamln07d0"]
 
 [ext_resource type="Script" path="res://scripts/character_selection.cs" id="1_8153i"]
-[ext_resource type="Texture2D" uid="uid://cll3vecwrht7" path="res://icon.svg" id="1_rxwpc"]
+[ext_resource type="Texture2D" uid="uid://dab2qj8irsij5" path="res://images/manon_icon.png" id="2_jjho6"]
+[ext_resource type="Texture2D" uid="uid://18o6wllpkkix" path="res://images/beatrice_icon.png" id="3_7xbok"]
 
 [node name="Character_selection" type="Control"]
 layout_mode = 3
@@ -19,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0.337255, 1)
+color = Color(0, 0.0784314, 0.156863, 1)
 
 [node name="Main_container" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -30,12 +31,14 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VSeparator" type="VSeparator" parent="Main_container"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 0
 
 [node name="Title_label" type="Label" parent="Main_container"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
 text = "Select Character"
 horizontal_alignment = 1
 
@@ -44,6 +47,7 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="HSeparator_start" type="HSeparator" parent="Main_container/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -52,7 +56,8 @@ size_flags_horizontal = 3
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_vertical = 4
-tooltip_text = "Character 1"
+tooltip_text = "Manon,
+The doctor"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Main_container/HBoxContainer/Character1_button"]
 layout_mode = 1
@@ -65,10 +70,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Main_container/HBoxContainer/Character1_button/HBoxContainer"]
-scale = Vector2(0.78125, 0.78125)
-texture = ExtResource("1_rxwpc")
+scale = Vector2(0.07603, 0.07603)
+texture = ExtResource("2_jjho6")
 
 [node name="HSeparator2" type="HSeparator" parent="Main_container/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
 
@@ -76,7 +82,8 @@ layout_mode = 2
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_vertical = 4
-tooltip_text = "Character 2"
+tooltip_text = "Beatrice,
+The child"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Main_container/HBoxContainer/Character2_button"]
 layout_mode = 1
@@ -89,90 +96,20 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Main_container/HBoxContainer/Character2_button/HBoxContainer"]
-scale = Vector2(0.78125, 0.78125)
-texture = ExtResource("1_rxwpc")
-
-[node name="HSeparator3" type="HSeparator" parent="Main_container/HBoxContainer"]
-custom_minimum_size = Vector2(25, 0)
-layout_mode = 2
-
-[node name="Character3_button" type="Button" parent="Main_container/HBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-size_flags_vertical = 4
-tooltip_text = "Character 3"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Main_container/HBoxContainer/Character3_button"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Main_container/HBoxContainer/Character3_button/HBoxContainer"]
-scale = Vector2(0.78125, 0.78125)
-texture = ExtResource("1_rxwpc")
-
-[node name="HSeparator4" type="HSeparator" parent="Main_container/HBoxContainer"]
-custom_minimum_size = Vector2(25, 0)
-layout_mode = 2
-
-[node name="Character4_button" type="Button" parent="Main_container/HBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-tooltip_text = "Character 4"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Main_container/HBoxContainer/Character4_button"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Main_container/HBoxContainer/Character4_button/HBoxContainer"]
-scale = Vector2(0.78125, 0.78125)
-texture = ExtResource("1_rxwpc")
-
-[node name="HSeparator5" type="HSeparator" parent="Main_container/HBoxContainer"]
-custom_minimum_size = Vector2(25, 0)
-layout_mode = 2
-
-[node name="Character5_button" type="Button" parent="Main_container/HBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-size_flags_vertical = 4
-tooltip_text = "Character 5"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Main_container/HBoxContainer/Character5_button"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Main_container/HBoxContainer/Character5_button/HBoxContainer"]
-scale = Vector2(0.78125, 0.78125)
-texture = ExtResource("1_rxwpc")
+scale = Vector2(0.110627, 0.110627)
+texture = ExtResource("3_7xbok")
 
 [node name="HSeparator_end" type="HSeparator" parent="Main_container/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="VSeparator2" type="VSeparator" parent="Main_container"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 8
 
-[connection signal="pressed" from="Main_container/HBoxContainer/Character1_button" to="." method="LoadSceneWithCharacter"]
+[connection signal="pressed" from="Main_container/HBoxContainer/Character1_button" to="." method="LoadSceneWithManon"]
+[connection signal="pressed" from="Main_container/HBoxContainer/Character2_button" to="." method="LoadSceneWithBeatrice"]

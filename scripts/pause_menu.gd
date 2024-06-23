@@ -46,7 +46,7 @@ func pause_game():
 
 func _on_resume_pressed():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
-	get_tree().current_scene.resume_game()
+	resume_game()
 
 func _on_settings_pressed():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
@@ -56,8 +56,10 @@ func _on_settings_pressed():
 	click.play()
 
 func _on_main_menu_pressed():
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
+	resume_game()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_tree().change_scene_to_file("res://scenes/title_menu.tscn")
+
 
 func _on_back_pressed():
 	click.play()

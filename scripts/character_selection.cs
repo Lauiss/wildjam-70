@@ -15,10 +15,17 @@ public partial class character_selection : Control
 	{
 	}
 	
-	private void LoadSceneWithCharacter()
+	private void LoadSceneWithManon()
 	{
 		// last param vector is to manage size of the character
 		SetCharacterVariables(5.0f, 10.0f, 4.5f, new Vector3(1,1,1));
+		GetTree().ChangeSceneToFile("res://scenes/playground.tscn");
+	}
+	
+		private void LoadSceneWithBeatrice()
+	{
+		// last param vector is to manage size of the character
+		SetCharacterVariables(4.0f, 7.0f, 3f, new Vector3(0.8f,0.8f,0.8f));
 		GetTree().ChangeSceneToFile("res://scenes/playground.tscn");
 	}
 	
