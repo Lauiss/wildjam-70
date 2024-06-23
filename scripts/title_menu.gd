@@ -3,6 +3,7 @@ extends Control
 var pause_menu
 @onready var pause_screen = $pauseScreen
 @onready var settings_screen = $settingsScreen
+@onready var howtoplay_screen = $HowToPlay
 @onready var default = $settingsScreen/default
 @onready var volume = $settingsScreen/volume
 @onready var language = $settingsScreen/Language
@@ -18,16 +19,19 @@ func _physics_process(_delta):
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			pause_screen.show()
 			settings_screen.hide()
+			howtoplay_screen.hide()
 
 func _on_settings_pressed():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	pause_screen.hide()
+	howtoplay_screen.hide()
 	settings_screen.show()
 
 func _on_back_pressed():
 	if default.visible:
 		pause_screen.show()
 		settings_screen.hide()
+		howtoplay_screen.hide()
 	else:
 		default.show()
 		volume.hide()
@@ -42,6 +46,12 @@ func _on_volume_pressed():
 
 func _on_play_pressed():
 	get_tree().change_scene_to_file("res://scenes/cinematic.tscn")
+	howtoplay_screen
+
+func _on_how_to_play_pressed():
+	howtoplay_screen.show()
+	default.hide()
+	settings_screen.hide()
 
 func _on_exit_pressed():
 	get_tree().quit()

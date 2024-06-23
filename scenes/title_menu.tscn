@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://cnxfnw4ffj33s"]
+[gd_scene load_steps=45 format=3 uid="uid://cnxfnw4ffj33s"]
 
 [ext_resource type="Script" path="res://scripts/title_menu.gd" id="1_gnegl"]
 [ext_resource type="Theme" uid="uid://c1smofwrfjxpt" path="res://UI/default_UI.tres" id="2_7qmhy"]
@@ -6,8 +6,12 @@
 [ext_resource type="AudioStream" uid="uid://ofhlh3wruqrr" path="res://SFX/volume.mp3" id="6_i2wqo"]
 [ext_resource type="FontFile" uid="uid://bntwy8qh4wgb0" path="res://Fonts/BebasNeue-Regular.ttf" id="7_b4cnv"]
 [ext_resource type="Texture2D" uid="uid://bl62en76gobmi" path="res://UI/fr.png" id="8_8rva4"]
+[ext_resource type="Texture2D" uid="uid://vuu3u8e27dy7" path="res://images/Shift.png" id="8_r6c7b"]
 [ext_resource type="AudioStream" uid="uid://dm4ci7vgwvspb" path="res://SFX/music_menu.mp3" id="9_1lidc"]
 [ext_resource type="Texture2D" uid="uid://brguj68y2sctg" path="res://UI/gb.png" id="9_p6hh2"]
+[ext_resource type="Texture2D" uid="uid://dhxx5krmftip3" path="res://images/Space.png" id="9_r5loh"]
+[ext_resource type="Texture2D" uid="uid://2nyukd1yj653" path="res://images/ZQSD.png" id="10_v2bpi"]
+[ext_resource type="Texture2D" uid="uid://c07agga8r0sa0" path="res://images/WASD.png" id="11_5527b"]
 
 [sub_resource type="Theme" id="Theme_fyeg3"]
 
@@ -153,7 +157,27 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxEmpty_cvrps")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_3xmw8")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_odq35")
-text = "Play"
+text = "Start"
+
+[node name="HSeparator_start5" type="HSeparator" parent="pauseScreen/pauseContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="how_to_play" type="Button" parent="pauseScreen/pauseContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_fyeg3")
+theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cvrps")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3xmw8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_odq35")
+text = "How to play"
 
 [node name="HSeparator_start3" type="HSeparator" parent="pauseScreen/pauseContainer"]
 modulate = Color(1, 1, 1, 0)
@@ -675,6 +699,119 @@ bus = &"Music"
 stream = ExtResource("6_i2wqo")
 bus = &"Voice"
 
+[node name="HowToPlay" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchor_left = 0.00173611
+anchor_right = 1.00174
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(223, 234)
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="HowToPlay"]
+texture_filter = 1
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jpm0h")
+
+[node name="MarginContainer" type="MarginContainer" parent="HowToPlay"]
+layout_mode = 2
+offset_right = 1152.0
+size_flags_vertical = 0
+
+[node name="ToMove" type="Label" parent="HowToPlay"]
+layout_mode = 2
+offset_left = 104.0
+offset_top = 104.0
+offset_right = 210.0
+offset_bottom = 148.0
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+text = "To move :"
+
+[node name="ToRun" type="Label" parent="HowToPlay"]
+offset_left = 343.0
+offset_top = 105.0
+offset_right = 449.0
+offset_bottom = 149.0
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+text = "To run :"
+
+[node name="ToJump" type="Label" parent="HowToPlay"]
+offset_left = 337.0
+offset_top = 271.0
+offset_right = 443.0
+offset_bottom = 315.0
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+text = "To jump :"
+
+[node name="WhatToDo" type="Label" parent="HowToPlay"]
+offset_left = 588.0
+offset_top = 98.0
+offset_right = 1099.0
+offset_bottom = 142.0
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+text = "Search for broken stars to stop the curse"
+
+[node name="WhatToDo2" type="Label" parent="HowToPlay"]
+offset_left = 588.0
+offset_top = 270.0
+offset_right = 1099.0
+offset_bottom = 314.0
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+text = "Don't get caught by the firefly"
+
+[node name="Shift" type="Sprite2D" parent="HowToPlay"]
+position = Vector2(424, 187)
+scale = Vector2(0.608372, 0.608372)
+texture = ExtResource("8_r6c7b")
+
+[node name="Jump" type="Sprite2D" parent="HowToPlay"]
+position = Vector2(418, 351)
+scale = Vector2(0.636468, 0.636468)
+texture = ExtResource("9_r5loh")
+
+[node name="ZQSD" type="Sprite2D" parent="HowToPlay"]
+position = Vector2(197, 233)
+scale = Vector2(0.532587, 0.532587)
+texture = ExtResource("10_v2bpi")
+
+[node name="WASD" type="Sprite2D" parent="HowToPlay"]
+position = Vector2(196, 350)
+scale = Vector2(0.532587, 0.532587)
+texture = ExtResource("11_5527b")
+
+[node name="Back" type="Button" parent="HowToPlay"]
+layout_mode = 2
+offset_left = 531.0
+offset_top = 550.0
+offset_right = 589.0
+offset_bottom = 594.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.913725, 0.521569, 0.215686, 1)
+theme_override_fonts/font = ExtResource("7_b4cnv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ebget")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nxcqq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cm11f")
+text = "Back"
+
 [node name="ButtonClick" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_i2wqo")
 
@@ -684,6 +821,7 @@ autoplay = true
 bus = &"Music"
 
 [connection signal="pressed" from="pauseScreen/pauseContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="pauseScreen/pauseContainer/how_to_play" to="." method="_on_how_to_play_pressed"]
 [connection signal="pressed" from="pauseScreen/pauseContainer/settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="pauseScreen/pauseContainer/exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="settingsScreen/default/Language" to="." method="_on_language_pressed"]
@@ -700,3 +838,4 @@ bus = &"Music"
 [connection signal="pressed" from="settingsScreen/Language/HBoxContainer2/VBoxContainer/AspectRatioContainer/fr_text" to="." method="_on_fr_text_pressed"]
 [connection signal="pressed" from="settingsScreen/Language/HBoxContainer2/VBoxContainer2/AspectRatioContainer/en_text" to="." method="_on_en_text_pressed"]
 [connection signal="pressed" from="settingsScreen/Language/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="HowToPlay/Back" to="." method="_on_back_pressed"]
