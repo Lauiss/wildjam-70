@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqc6d3ss1aq1d"]
+[gd_scene load_steps=11 format=3 uid="uid://bqc6d3ss1aq1d"]
 
 [ext_resource type="Script" path="res://scripts/player.cs" id="1_1c7mt"]
 [ext_resource type="PackedScene" uid="uid://bi5s7ndpbkb4k" path="res://scenes/hand.tscn" id="2_qoo0d"]
+[ext_resource type="AudioStream" uid="uid://d3n1ac6ctisx0" path="res://SFX/walk.mp3" id="3_xcfaf"]
+[ext_resource type="AudioStream" uid="uid://cngl0iaoa3d04" path="res://SFX/jump.mp3" id="4_qqa4i"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4yh1l"]
 
@@ -58,9 +60,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.98921, 0)
 shape = SubResource("ConvexPolygonShape3D_aoi7c")
 
 [node name="Hand" parent="." instance=ExtResource("2_qoo0d")]
+visible = false
+metadata/_edit_use_anchors_ = true
 
 [node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68755, 0)
 
 [node name="Camera" type="Camera3D" parent="Head"]
 current = true
+
+[node name="walk" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_xcfaf")
+
+[node name="jump" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_qqa4i")
