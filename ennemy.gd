@@ -20,4 +20,4 @@ func _physics_process(_delta):
 		move_and_slide()
 
 func _on_area_3d_body_entered(body):
-	print("lost")
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")

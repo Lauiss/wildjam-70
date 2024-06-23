@@ -11,8 +11,10 @@ var pause_menu
 @onready var voices = $settingsScreen/Language/Voices
 
 func _ready():
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED;
 	hide()
+	get_tree().paused = false
 	settings_screen.hide()
 
 func resume_game():

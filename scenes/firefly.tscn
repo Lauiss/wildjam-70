@@ -29,6 +29,7 @@ linear_accel_min = 1.0
 linear_accel_max = 4.0
 scale_min = 0.2
 scale_curve = SubResource("CurveTexture_asaim")
+color = Color(0.525101, 0.525101, 0.525101, 1)
 color_ramp = SubResource("GradientTexture1D_2pdr2")
 hue_variation_min = -0.01
 hue_variation_max = 0.01

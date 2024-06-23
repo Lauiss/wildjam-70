@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqmlg4cdn4oyr"]
+[gd_scene load_steps=7 format=3 uid="uid://dh8028xnv04x3"]
 
 [ext_resource type="Script" path="res://scripts/game_over.cs" id="1_hs4qk"]
 [ext_resource type="Texture2D" uid="uid://b4nucam3th5q0" path="res://images/dawnfire_logo.png" id="1_mlhgp"]

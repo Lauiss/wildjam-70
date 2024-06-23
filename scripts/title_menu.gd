@@ -46,7 +46,6 @@ func _on_volume_pressed():
 
 func _on_play_pressed():
 	get_tree().change_scene_to_file("res://scenes/cinematic.tscn")
-	howtoplay_screen
 
 func _on_how_to_play_pressed():
 	howtoplay_screen.show()
